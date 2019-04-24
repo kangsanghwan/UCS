@@ -58,7 +58,7 @@ textarea { overflow: auto; padding: 6px 10px; border: 1px solid #b3b3b3; }
 select { height: 30px; padding: 0 5px; border: 1px solid #b3b3b3; }
 
 /* Web Accessibility */
-.guide-inner { position: relative; }
+.guide-inner { position: relative; padding-bottom: 40px; }
 
 .blind { position: absolute; visibility: hidden; width: 0px; height: 0px; }
 
