@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="images/ico/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="images/ico/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="images/ico/favicon.ico">
+	
+	<link rel="stylesheet" type="text/css" href="src/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="src/js/libs/jQuery-ui/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="src/css/ngii-mng.css">
+	
+    <title>올포랜드 통합관리자 - 회원가입</title>
+	
+	<script type="text/javascript" src="src/js/libs/jQuery/1.12.3/jquery.min.js"></script>
+	<script type="text/javascript" src="src/js/libs/jQuery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="src/js/ngii-mng.js"></script>
+	
+    <!--[if lt IE 9]>
+		<script type="text/javascript" src="src/js/libs/html5shiv.min.js"></script>
+		<script type="text/javascript" src="src/js/libs/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <!-- Skip Navigation -->
+	<a href="#content" class="nav-skip">본문바로가기</a>
+	<a href="#gnb" class="nav-skip">주메뉴 바로가기</a>
+	<a href="#lnb" class="nav-skip">서브메뉴 바로가기</a>
+    <!-- /Skip Navigation -->
+	
+	<!-- Header -->
+    <header>
+		<div class="inner">
+			<h1 class="logo"><a href="login.html"><i></i><span class="blind">올포랜드 통합관리자</span></a></h1>
+            <div class="user-info">
+                <a href="login.html">로그인</a>
+			</div>
+		</div>
+    </header>
+    <!-- /Header -->
+	
+	<!-- Container -->
+	<article class="container wide">
+        <h1 class="blind">회원가입</h1>
+        <section id="content" class="content">
+            <h1 class="title-sub-h1">회원가입</h1>
+
+            <!-- Location -->
+            <ol class="location">
+                <li><i class="fa fa-home"></i><span class="blind">홈</span></li>
+                <li>회원가입</li>
+            </ol>
+            <!-- /Location -->
+            
+            <h2 class="title-sub-h2">01. 이용약관</h2>
+            <div class="block-agreement">
+                <div class="terms">
+
+                </div>
+                <label><input type="checkbox" id="" name=""><span>이용약관에 동의 합니다.</span></label>
+            </div>
+            
+            <h2 class="title-sub-h2">02. 개인정보 수집동의</h2>
+            <div class="block-agreement">
+                <div class="terms">
+
+                </div>
+                <label><input type="checkbox" id="" name=""><span>개인정보 수집에 동의 합니다.</span></label>
+            </div>
+            
+            <!-- 가입정보 -->
+            <h2 class="title-sub-h2">03. 가입정보</h2>
+            <div class="table-vertical type2">
+				<table>
+					<caption class="blind">기본 정보</caption>
+					<colgroup>
+						<col style="width:15%;">
+						<col style="width:auto">
+					</colgroup>
+					<tbody>
+                        <tr>
+							<th scope="row"><label for="u-id">사용자ID</label></th>
+                            <td>
+                                <input type="text" id="u-id" name="u-id" value="">
+                                <button type="button" class="bt dove table show-layer" aria-edit-div="layer-idcheck">중복체크</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="u-pw">비밀번호</label></th>
+                            <td>
+                                <input type="password" id="u-pw" name="u-pw" value="">
+                                <strong id="check-pwd1" class="check-data available">비밀번호 사용이 가능합니다.</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="u-pw2">비밀번호 확인</label></th>
+                            <td>
+                                <input type="password" id="u-pw2" name="u-pw2" value="">
+                                <strong id="check_pwd2" class="check-data error">비밀번호는 8자리 이상 입력해 주세요.</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="u-name">이름</label></th>
+                            <td><input type="text" id="u-name" name="u-name" value=""></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="u-phone">휴대폰</label></th>
+                            <td>
+                                <select id="u-phone" name="u-phone">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                                <input type="text" id="u-phone2" class="input-s" name="u-phone2" value="" title="휴대폰 앞자리">
+                                <input type="text" id="u-phone3" class="input-s" name="u-phone3" value="" title="휴대폰 뒷자리">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="u-addr">주소</label></th>
+                            <td class="addr-area">
+                                <label for="u-zipcode" class="blind">우편번호</label>
+                                <input type="text" id="u-zipcode" class="input-m" name="u-zipcode" value="">
+                                <button type="button" class="bt dove table">우편번호검색</button>
+                                <input type="text" id="u-addr" class="full" name="u-addr" value="">
+                                <input type="text" id="u-addr2" class="full" name="u-addr2" value="" title="상세주소">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="u-email">이메일</label></th>
+                            <td>
+                                <input type="text" name="u-email1" /> @ <input type="text" name="u-email2">
+                                <select name="u-email2">
+                                    <option value="">직접입력</option>
+                                    <option value="naver">naver.com</option>
+                                    <option value="daum">daum.net</option>
+                                    <option value="nate">nate.com</option>
+                                    <option value="hotmail">hotmail.com</option>
+                                    <option value="gmail">gamil.com</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">권한</th>
+                            <td>
+								<label><input type="radio" id="" name="u-auth"><span>관리자</span></label>
+								<label><input type="radio" id="" name="u-auth"><span>일반사용자</span></label>
+                            </td>
+                        </tr>
+					</tbody>
+				</table>			
+            </div>
+            <!-- /가입정보 -->
+
+            <div class="bt-area text-right">
+                <button type="reset" class="bt reset">취소</button>
+                <button type="submit" class="bt submit">가입하기</button>
+            </div>
+
+        </section>
+        <!-- /Contents -->
+
+    </article>
+	<!-- /Container -->
+    
+	<!-- Footer -->
+	<footer>
+		<div class="inner">
+			<p class="f-logo">올포랜드 로고</p>
+			<ul>
+				<li><a href="#"><em>개인정보 처리방침</em></a></li>
+				<li><a href="#">저작권정책</a></li>
+				<li><a href="#">이메일무단수집거부</a></li>
+			</ul>
+            <address>서울특별시 금천구 가산디지털1로 145</address>
+            <span>TEL : 02 - 855 - 5724</span>
+            <span>FAX : 02 - 857 - 5746</span>
+            <small>© ALLFORLAND, All rights reserved.</small>
+
+			<select title="관련기관 바로가기" class="family-site">
+				<option value="">관련기관목록</option>
+			</select>
+		</div>
+	</footer>
+	<!-- /Footer --> 
+    
+    <!-- Layer - 아이디 중복확인 -->
+	<section id="layer-idcheck" class="layer-popup">
+		<h1 class="layer-header">아이디 중복확인</h1>
+		<div class="layer-contents">
+            <strong class="check-id">all4land12</strong>
+			<p class="check-data available">사용이 가능한 아이디 입니다.</p>
+			<p class="check-data error">이미 사용중인 아이디 입니다.</p>
+		</div>
+        <button type="button" class="bt close">팝업닫기</button>
+	</section>
+	<!-- /Layer - 아이디 중복확인 -->
+</body>
+</html>

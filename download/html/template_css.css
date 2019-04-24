@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing : border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	font-family: "맑은고딕","맑은 고딕",Malgun Gothic,MalgunGothic,Helvetica, Arial, sans-serif;
+	-webkit-tap-highlight-color: transparent;
+}
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+ul, li, ol {
+	list-style: none;
+}
+img {
+	border: 0;
+	vertical-align: top;
+}
+a, a:hover, a:active, a:visited {
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	cursor: pointer;
+}
+fieldset {
+	border: 0;
+}
+legend, caption {
+	position: absolute;
+	overflow: hidden;
+	width: 0px;
+	height: 0px;
+}
+textarea {
+	overflow: auto;
+}
+button {
+	display: inline-block;
+	cursor: pointer;
+	background: none;
+	font-family: inherit;
+	vertical-align: middle;
+	cursor: pointer;
+	white-space: nowrap ;
+	text-decoration: none;
+	background: transparent;
+	border: none;
+	outline: 0
+}
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+button[disabled], 
+input[disabled] {
+	cursor: default;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+i, em, address {
+	font-style: normal;
+}
+small {
+	font-size: 80%;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+hr {
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+}
+pre {
+	overflow: auto;
+}

@@ -23,7 +23,6 @@ html {
 }
 body {
 	min-width: 320px;
-    font-family: "Nanum Square R", "돋움", Dotum, Helvetica, Arial, sans-serif;
     color: #666;
     font-size: 13px;  
 	background: #e7ebed;
@@ -47,9 +46,6 @@ a, a:hover, a:active, a:visited {
 a, a:hover, a:active, a:visited {
 	text-decoration: none;
 	cursor: pointer;
-}
-strong, b, optgroup, th, dt, h1, h2, h3, h4, h5, h6 {
-	font-family: 'Nanum Square B', Dotum, Helvetica, Arial, sans-serif;
 }
 fieldset {
 	border: 0;
@@ -117,7 +113,6 @@ textarea[readonly], textarea[disabled] {
 }
 input[placeholder] {
 	color: #666;
-	font-family: 'Nanum Barun Gothic R', Dotum, Helvetica, Arial, sans-serif;
     font-size: 14px;
 }
 input[type="checkbox"] + span,
@@ -1533,7 +1528,7 @@ footer p {
 h2.sub-title {
 	position: relative;
 	height: 60px;
-	padding: 16px 40px 15px 70px;
+	padding: 12px 40px 25px 70px;
 	color: #fff;
 	font-size: 24px;
     background: #0caddf;			
@@ -1548,7 +1543,7 @@ h2.sub-title {
 h2.sub-title:before {
 	content:'';
 	position:absolute;
-	top: 17px;
+	top: 20px;
 	left: 38px;
 	vertical-align: top;
 	width: 22px;

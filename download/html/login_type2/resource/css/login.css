@@ -1,0 +1,374 @@
+@charset "UTF-8";
+
+/* font */
+@font-face {
+    font-family:'Nanum Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/NanumGothic-Regular.eot);
+    src: url(../font/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumGothic-Regular.woff) format('woff'),
+        url(../font/NanumGothic-Regular.ttf) format('truetype');
+    src:local(※), url(../font/NanumGothic-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Nanum Gothic Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/NanumGothic-Bold.eot);
+    src: url(../font/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumGothic-Bold.woff) format('woff'),
+        url(../font/NanumGothic-Bold.ttf) format('truetype');
+    src:local(※), url(../font/NanumGothic-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Nanum Gothic Extra Bold';
+    font-style: normal;
+    font-weight: 800;
+    src: url(../font/NanumGothic-ExtraBold.eot);
+    src: url(../font/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumGothic-ExtraBold.woff) format('woff'),
+        url(../font/NanumGothic-ExtraBold.ttf) format('truetype');
+    src:local(※), url(../font/NanumGothic-ExtraBold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Nanum Gothic Light';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/NanumGothic-Light.eot);
+    src: url(../font/NanumGothic-Light.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumGothic-Light.woff) format('woff'),
+        url(../font/NanumGothic-Light.ttf) format('truetype');
+    src:local(※), url(../font/NanumGothic-Light.woff) format('woff');
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+	box-sizing: border-box;
+}
+body {
+	min-width: 320px;
+    font-family: "Nanum Gothic", "돋움", Dotum, Helvetica, Arial, sans-serif;
+    color: #666;
+    font-size: 13px;  
+	-ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+ul, li, ol {
+    list-style: none;
+}
+img {
+    border: 0;
+    vertical-align: top;
+}
+a, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    /*transition: all 0.3s ease-in 0s;
+    -webkit-transition: all 0.3s ease-in 0s;
+    -moz-transition: all 0.3s ease-in 0s;
+    -ms-transition: all 0.3s ease-in 0s;*/
+}
+fieldset, legend {
+    border: 0;
+}
+legend, caption {
+    display: none
+}
+strong, b, optgroup, th, dt, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Nanum Gothic Bold', Dotum, Helvetica, Arial, sans-serif;
+}
+input {
+    line-height: normal;
+}
+textarea {
+    overflow: auto;
+}
+button {
+    display: inline-block;
+    cursor: pointer;
+    background: none;
+    font-family: inherit;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap ;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    outline: 0;
+    transition: all 0.4s ease;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td, th {
+    padding: 0;
+}
+address {
+    display: block;
+    font-style: normal;
+}
+i, em {
+    font-style: normal;
+}
+small {
+    font-size: 80%;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+figure {
+    margin: 1em 40px;
+}
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+address, em {
+    font-style: normal;
+}
+pre {
+    overflow: auto;
+}
+input[readonly], input[disabled],
+select[readonly], select[disabled],
+textarea[readonly], textarea[disabled] {
+    color: #999;
+    background-color: #eee
+}
+iframe {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Web Accessibility */
+.blind {
+    position: absolute;
+    visibility: hidden;
+}
+
+/* Position */
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.al {
+    text-align: left !important
+}
+.ar {
+    text-align: right !important
+}
+.ac {
+    text-align: center !important
+}
+.clear {
+    clear: both;
+}
+
+/* Display */
+.bl {
+    display: block;
+}
+.inb {
+    display: inline-block;
+}
+.in {
+    display: inline;
+}
+
+/* Icon */
+.sprite {
+	display: inline-block;	
+	background: url('../../images/ico/sprite.png') no-repeat 0 0;
+}
+.sprite.login {
+	width: 20px;
+	height: 20px;
+	background-position: -200px -50px;
+}
+
+/* button */
+.bt {
+  	display: inline-block;
+	position: relative;
+  	vertical-align: top;
+	font-family: "Nanum Gothic Bold", "돋움", Dotum, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+    line-height: 1.2em;
+	text-align: center;
+	box-sizing: border-box;
+}
+.bt.login {
+	width: 91px;
+	height: 77px; 
+	padding-top: 45px;
+	font-size: 16px;
+	background: #06a6e1 url('../../images/ico/ico_login.png') no-repeat center 20px;
+}
+
+/* Skip Navigation */
+.skip-navigation {
+	width: 100%; 
+	margin: 0px auto; 
+	padding: 0px;
+}
+.skip-navigation dd a {
+	position: fixed; 
+	z-index: 100;
+	left: -300px; 
+	display: block; 
+	width: 200px; 
+	text-align: center; 
+	text-decoration: none;
+    transition: none;
+	background: #fff;
+	border: 1px dotted #ddd;
+}
+.skip-navigation dd a:hover,
+.skip-navigation dd a:active {
+	top: 0px; 
+	left: 0; 
+	padding: 5px; 	
+}
+
+/* Footer */
+footer {
+	width: 100%;    
+	height: 80px;
+	padding-top: 30px;
+	color: #747474;	
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	box-sizing: border-box;
+}
+footer address {
+	display: inline
+}
+
+/* Contents */
+#container {
+}
+
+/* Login */
+#login {
+	background-size: auto;
+}
+#login.bg0 {
+	background: url('../../images/bg/bg_login_area0.jpg') no-repeat center top;
+}
+#login.bg1 {
+	background: url('../../images/bg/bg_login_area1.jpg') no-repeat center top;
+}
+#login.bg2 {
+	background: url('../../images/bg/bg_login_area2.jpg') no-repeat center top;
+}
+#login.bg3 {
+	background: url('../../images/bg/bg_login_area3.jpg') no-repeat center top;
+}
+#login.bg4 {
+	background: url('../../images/bg/bg_login_area4.jpg') no-repeat center top;
+}
+#login.bg5 {
+	background: url('../../images/bg/bg_login_area5.jpg') no-repeat center top;
+}
+#login .logo {
+	padding: 20px 35px;
+}
+#login footer {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	background: #fff;
+}
+#login .login-area {
+	position: fixed;
+	bottom: 80px;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	color: #fff;
+	background: #2b5e93 url('../../images/bg/bg_login_cont.png') no-repeat right center;
+}
+#login .login-area .inner {
+	position: relative;
+	width: 900px;
+	height: 160px;
+	margin: 0px auto;
+	padding: 30px 30px 0 30px;
+	box-sizing: border-box;
+}
+.login-area hgroup {
+	float: left;
+    width: 500px;
+}
+.login-area hgroup h1 {
+	margin-bottom: 10px;
+	color: #fff;
+	font-size: 30px;
+}
+.login-area hgroup p {
+	color: #fff;
+	font-size: 14px;
+	line-height: 1.5em;
+}
+.login-area hgroup p span {
+	display: inline-block;
+	margin-left: 5px;
+	opacity: 0.5;
+}
+.login-form {
+	float: right;
+    width: 335px;
+}
+.login-form input[type='text'], .login-form input[type='password'] {
+    width: 240px;
+    height: 36px; 
+	margin-bottom: 5px;	
+	padding: 10px;
+    font-size: 14px;
+	border-color: #899cb5;
+	box-sizing: border-box
+}
+.login-form input[type='password'] {
+	border-top: 0px;
+}
+.login-form input:focus {
+    background: #fff;
+}
+.login-form .bt.login {
+	position: absolute;    
+	right: 30px;
+    top: 30px;
+}
+.login-form .checkbox {
+	display: block;
+	margin-top: 5px;
+}
+.login-form .checkbox input[type="checkbox"] {
+	margin: 2px 5px 0 0;	
+}
+.login-form .checkbox span {
+	display: inline-block;
+	vertical-align: top;
+}
+
+@media screen and (min-width:900px) {
+	#login {
+		background-size: cover !important;
+	}
+}
+
+
+
+

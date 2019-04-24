@@ -1,0 +1,1773 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" /><!-- Mobile -->
+	<link rel="icon" type="image/x-icon" href="images/ico/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="images/ico/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="images/ico/favicon.ico">
+	
+	<link rel="stylesheet" type="text/css" href="src/js/libs/jQuery-ui/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="src/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/guide.css">
+    
+    <title>올포랜드 공통 가이드</title>
+	
+	<script type="text/javascript" src="src/js/libs/jQuery/1.12.3/jquery.min.js"></script>
+	<script type="text/javascript" src="src/js/libs/jQuery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="src/js/guide.js"></script>
+	
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="src/js/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script type="text/javascript" src="src/js/libs/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+</head>
+<body>
+    <!-- Skip Navigation -->
+	<a href="#container" class="nav-skip">본문바로가기</a>
+	<a href="#gnb" class="nav-skip">메뉴 바로가기</a>
+    <!-- /Skip Navigation -->
+	
+    <!-- Header -->
+    <header>
+        <div class="inner">
+            <p class="logo"><a href=""><img src="images/logo.png" alt="올포랜드 로고"></a></p>
+            <nav id="gnb">
+            </nav>
+        </div>
+    </header>
+    <!-- /Header -->
+	
+    <!-- Contents -->
+    <article id="container">
+        <div class="contents inner">
+            <!-- 버튼 -->
+            <section id="tab-button" style="display: block">
+                <h4 class="title">버튼</h4>
+                <div class="sub-cont">
+                    <!-- Tab Menu -->
+                    <nav class="tab-menu type2">
+                        <button type="button" rel="button-1">HTML</button>
+                        <button type="button" rel="button-2">CSS</button>
+                        <button type="button" rel="button-3" class="current">결과보기</button>
+                    </nav>
+                    <!-- /Tab Menu -->
+
+                    <div class="tab-content">
+                        <!-- Tab1 -->
+                        <div id="button-1">
+                            <div class="preview">
+                                <pre><span class="txt-green">&lt;!-- Button --&gt;</span>
+&lt;button type="submit" class="bt submit samll"&gt;저장&lt;/button&gt;
+&lt;button type="submit" class="bt submit"&gt;저장&lt;/button&gt;
+&lt;button type="submit" class="bt submit large"&gt;저장&lt;/button&gt;
+
+&lt;button type="reset" class="bt reset samll"&gt;취소&lt;/button&gt;
+&lt;button type="reset" class="bt reset"&gt;취소&lt;/button&gt;
+&lt;button type="reset" class="bt reset large"&gt;취소&lt;/button&gt;
+
+&lt;button type="button" class="bt delete samll"&gt;삭제&lt;/button&gt;
+&lt;button type="button" class="bt delete"&gt;삭제&lt;/button&gt;
+&lt;button type="button" class="bt delete large"&gt;삭제&lt;/button&gt;
+
+&lt;button type="button" class="bt close samll"&gt;닫기&lt;/button&gt;
+&lt;button type="button" class="bt close"&gt;닫기&lt;/button&gt;
+&lt;button type="button" class="bt close large"&gt;닫기&lt;/button&gt;
+
+&lt;a href="file.hwp" class="bt excel small" disabled&gt;다운로드&lt;/a&gt;
+&lt;a href="file.hwp" class="bt excel" disabled&gt;다운로드&lt;/a&gt;
+&lt;a href="file.hwp" class="bt excel large" disabled&gt;다운로드&lt;/a&gt;
+
+&lt;button type="submit" class="bt submit xsmall" disabled&gt;저장&lt;/button&gt;
+&lt;button type="submit" class="bt submit small" disabled&gt;저장&lt;/button&gt;
+&lt;button type="submit" class="bt submit medium" disabled&gt;저장&lt;/button&gt;
+&lt;button type="submit" class="bt submit large" disabled&gt;저장&lt;/button&gt;
+<span class="txt-green">&lt;!-- /Button --&gt;</span></pre>
+                            </div>
+                        </div>
+                        <!-- /Tab1 -->
+                        <!-- Tab2 -->
+                        <div id="button-2">
+                            <div class="preview">
+                                <pre><span class="txt-green">/* Button */</span>
+.bt {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+.bt[disabled] {
+    color: #adb5bd !important;
+    background: #dee2e6 !important;
+    border: 1px solid #dee2e6 !important;
+    cursor: default !important;
+}
+.bt.xsmall {
+    min-width: 50px;
+    padding: 3px 5px;
+    font-size: 12px;
+}
+.bt.small {
+    min-width: 70px;
+    padding: 5px 10px;
+}
+.bt.medium {	
+    min-width: 100px;
+    padding: 9px 20px;
+}
+.bt.large {    
+    min-width: 150px;
+    padding: 13px 30px;
+    font-size: 15px;
+}
+.bt.submit {
+    color: #fff;
+    background-color: #00a1e0;
+    border: 1px solid transparent;
+}
+.bt.submit:hover, 
+.bt.submit.active {	
+    color: #00a1e0;
+    background-color: #fff;
+    border-color: #00a1e0;
+}
+.bt.reset {
+    color: #fff;
+    background-color: #97a9b2;
+    border: 1px solid transparent;
+}
+.bt.reset:hover, 
+.bt.reset.active {
+    color: #97a9b2;
+    background-color: #fff;
+    border-color: #97a9b2;
+}  
+.bt.delete {
+    color: #f8f9fa;
+    background-color: #f44336;
+    border: 1px solid transparent;
+}
+.bt.delete:hover, 
+.bt.delete.active {
+    color: #f44336;
+    background: #fff;
+    border-color: #f44336;
+}
+.bt.close {    
+    color: #fff;
+    background: #495057;
+    border: 1px solid transparent;
+}
+.bt.close:hover, 
+.bt.close.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #495057;
+}</pre>
+                            </div>
+                        </div>
+                        <!-- /Tab2 -->
+                        <!-- Tab2 -->
+                        <div id="button-3" style="display: block;">
+                            <div class="box-round">
+                                <ul class="list-table">
+                                    <li>
+                                        <button type="submit" class="bt submit xsmall">저장</button>
+                                        <button type="submit" class="bt submit small">저장</button>
+                                        <button type="submit" class="bt submit medium">저장</button>
+                                        <button type="submit" class="bt submit large">저장</button>
+                                    </li>
+                                    <li>
+                                        <button type="reset" class="bt reset xsmall">취소</button>
+                                        <button type="reset" class="bt reset small">취소</button>
+                                        <button type="reset" class="bt reset medium">취소</button>
+                                        <button type="reset" class="bt reset large">취소</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="bt delete xsmall">삭제</button>
+                                        <button type="button" class="bt delete small">삭제</button>
+                                        <button type="button" class="bt delete medium">삭제</button>
+                                        <button type="button" class="bt delete large">삭제</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="bt close xsmall">닫기</button>
+                                        <button type="button" class="bt close small">닫기</button>
+                                        <button type="button" class="bt close medium">닫기</button>
+                                        <button type="button" class="bt close large">닫기</button>
+                                    </li>
+                                    <li>
+                                        <button type="submit" class="bt submit xsmall" disabled>저장</button>
+                                        <button type="submit" class="bt submit small" disabled>저장</button>
+                                        <button type="submit" class="bt submit medium" disabled>저장</button>
+                                        <button type="submit" class="bt submit large" disabled>저장</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /Tab2 -->
+                    </div>
+                </div>
+            </section>
+            <!-- /버튼 -->
+
+            <!-- 폼 -->
+            <section id="tab-form">
+                <h4 class="title">폼</h4>
+                <div class="sub-cont">
+                    <!-- Tab Menu -->
+                    <nav class="tab-menu type2">
+                        <button type="button" rel="form-1">HTML</button>
+                        <button type="button" rel="form-2">CSS</button>
+                        <button type="button" rel="form-3">JS</button>
+                        <button type="button" rel="form-4" class="current">결과보기</button>
+                    </nav>
+                    <!-- /Tab Menu -->
+
+                    <div class="tab-content">
+                        <!-- Tab1 -->
+                        <div id="form-1">
+                            <div class="preview">
+                                <pre><span class="txt-green">&lt;!-- Checkbox --&gt;</span>
+&lt;label&gt;&lt;input type="checkbox" id="" name=""&gt;&lt;span&gt;체크박스&lt;/span&gt;&lt;/label&gt;
+&lt;label class="custom-checkbox"&gt;&lt;input type="checkbox" id="" name=""&gt;&lt;span&gt;체크박스&lt;/span&gt;&lt;/label&gt;
+<span class="txt-green">&lt;!-- /Checkbox --&gt;</span>
+
+<span class="txt-green">&lt;!-- Radio --&gt;</span>
+&lt;label&gt;&lt;input type="radio" id="" name="radio"&gt;&lt;span&gt;라디오&lt;/span&gt;&lt;/label&gt;
+&lt;label class="custom-radio"&gt;&lt;input type="radio" id="" name="radio"&gt;&lt;span&gt;라디오&lt;/span&gt;&lt;/label&gt;
+<span class="txt-green">&lt;!-- /Radio --&gt;</span>
+
+<span class="txt-green">&lt;!-- Select --&gt;</span>
+&lt;label for="select1" class="blind"&gt;선택1&lt;/label&gt;
+&lt;select id="select1" name=""&gt;
+    &lt;option value=""&gt;전체&lt;/option&gt;
+    &lt;option value=""&gt;No&lt;/option&gt;
+    &lt;option value=""&gt;제목&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;label for="select2" class="blind"&gt;선택2&lt;/label&gt;
+&lt;select id="select2" name="" class="custom-select"&gt;
+    &lt;option value=""&gt;전체&lt;/option&gt;
+    &lt;option value=""&gt;No&lt;/option&gt;
+    &lt;option value=""&gt;제목&lt;/option&gt;
+&lt;/select&gt;
+<span class="txt-green">&lt;!-- /Select --&gt;</span>
+
+<span class="txt-green">&lt;!-- Upload File --&gt;</span>
+<div class="custom-upload-file">		
+    <input type="text" class="u-text" readonly="readonly">
+    <label for="u-file" class="bt search small">파일선택</label>		
+    <input id="u-file" type="file">	
+</div>
+<span class="txt-green">&lt;!-- /Upload File --&gt;</span>
+
+<span class="txt-green">&lt;!-- Upload File Image --&gt;</span>
+<div class="custom-upload-file">		
+    <input type="text" class="u-text" readonly="readonly">
+    <label for="u-image-file" class="bt search small">파일선택</label>		
+    <input id="u-image-file" type="file">	
+
+    <div class="u-preview">
+        <img class="u-image-preview" src="images/thumb/img_upload.jpg">
+        <input type="hidden" class="u-image-base64">
+    </div>
+</div>
+<span class="txt-green">&lt;!-- /Upload File Image --&gt;</span></pre>
+                            </div>
+                        </div>
+                        <!-- /Tab1 -->
+                        <!-- Tab2 -->
+                        <div id="form-2">
+                            <div class="preview">
+                                <pre><span class="txt-green">/* Selete */</span>
+.custom-select {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+}
+.custom-select .s-blind {
+    visibility: hidden;    
+    min-width: 120px;
+    padding-right: 10px;
+}
+.custom-select .s-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 6px 10px;
+    background-color: #fff;
+    border: 1px solid #b3b3b3;
+}
+.custom-select .s-title:after { 
+    content: "\f107";   
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 28px;
+    height: 28px;
+    font: normal normal normal 20px/1 FontAwesome;
+    line-height: 28px;
+    text-align: center;
+    border-left: 1px solid #b3b3b3;
+}
+.custom-select .s-options {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    padding: 3px 0;
+    border: 2px solid #000;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.custom-select .s-options li {
+    margin: 0;
+    padding: 2px 10px;
+}
+.custom-select .s-options li:hover {
+    background-color:#d7d7d7;
+}
+.custom-select .s-options li.selected {
+    background-color: #0072bc;
+    color: #fff;
+}
+
+<span class="txt-green">/* Radio Buttons */</span>
+.custom-radio [type="radio"]:not(:checked),
+.custom-radio [type="radio"]:checked {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.custom-radio [type="radio"]:not(:checked) + span,
+.custom-radio [type="radio"]:checked + span {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    color: #444;
+    line-height: 25px;
+    -webkit-transition: .28s ease;
+    transition: .28s ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.custom-radio [type="radio"] + span:before,
+.custom-radio [type="radio"] + span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 4px;
+    width: 20px;
+    height: 20px;
+    z-index: 0;
+    -webkit-transition: .28s ease;
+    transition: .28s ease;
+    box-sizing: border-box;
+}
+.custom-radio [type="radio"]:not(:checked) + span:before,
+.custom-radio [type="radio"]:not(:checked) + span:after,
+.custom-radio [type="radio"]:checked + span:before,
+.custom-radio [type="radio"]:checked + span:after {
+    border-radius: 50%;
+}
+.custom-radio [type="radio"]:not(:checked) + span:before,
+.custom-radio [type="radio"]:not(:checked) + span:after {
+    background: #c3c3c3;
+    border: 5px solid #c3c3c3;
+}
+.custom-radio [type="radio"]:not(:checked) + span:after {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.custom-radio [type="radio"]:checked + span:before {
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background-color: #2b496d;
+}
+.custom-radio [type="radio"]:checked + span:after {
+    border: 5px solid #97d7f2;
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+}
+.custom-radio [type="radio"]:disabled:not(:checked) + span:before,
+.custom-radio [type="radio"]:disabled:checked + span:before {
+    background-color: transparent;
+    border-color: rgba(0, 0, 0, 0.42);
+}
+.custom-radio [type="radio"]:disabled + span {
+    color: rgba(0, 0, 0, 0.42);
+}
+.custom-radio [type="radio"]:disabled:not(:checked) + span:before {
+    border-color: rgba(0, 0, 0, 0.42);
+}
+.custom-radio [type="radio"]:disabled:checked + span:after {
+    background-color: rgba(0, 0, 0, 0.42);
+    border-color: #949494;
+}
+
+<span class="txt-green">/* Checkbox */</span>
+.custom-checkbox [type="checkbox"]:not(:checked),
+.custom-checkbox [type="checkbox"]:checked {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.custom-checkbox [type="checkbox"] + span {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    color: #444;
+    font-size: 12px;
+    line-height: 25px;
+    -webkit-transition: .28s ease;
+    transition: .28s ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.custom-checkbox [type="checkbox"] + span:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 2px;
+    height: 8px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+.custom-checkbox [type="checkbox"] + span:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    border-radius: 2px;
+    background: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+.custom-checkbox [type="checkbox"]:checked + span:after {
+    border-right: 2px solid #006eb6;
+    border-bottom: 2px solid #006eb6;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+.custom-checkbox [type="checkbox"]:checked + span:before {
+    background: #a4d2f2
+}
+.custom-checkbox [type="checkbox"]:not(:checked):disabled + span:before {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.42);
+}
+.custom-checkbox [type="checkbox"]:checked:disabled + span:before {
+    border-right: 2px solid rgba(0, 0, 0, 0.42);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.42);
+}</pre>
+                            </div>
+                        </div>
+                        <!-- /Tab2 -->
+
+                        <!-- Tab3 -->
+                        <div id="form-3">
+                            <div class="preview">
+                                <pre>
+$(document).ready(function(){
+    <span class="txt-green">//Select</span>
+    $('.custom-select').each(function () {
+
+        var $this = $(this),
+            numberOfOptions = $(this).children('option').length;
+
+        $this.addClass('s-blind');
+        $this.wrap('&lt;div class="custom-select"&gt;&lt;/div&gt;');
+        $this.after('&lt;div class="s-title"&gt;&lt;/div&gt;');
+
+        var $optionsTitle = $this.next('div.s-title');
+        $optionsTitle.text($this.children('option').eq(0).text());
+
+        var $list = $('&lt;ul /&gt;', {
+            'class': 's-options'
+        }).insertAfter($optionsTitle);
+
+        for (var i = 0; i &lt; numberOfOptions; i++) {
+            $('&lt;li /&gt;', {
+                text: $this.children('option').eq(i).text(),
+                rel: $this.children('option').eq(i).val()
+            }).appendTo($list);
+        }
+
+        var $listItems = $list.children('li');
+
+        $optionsTitle.click(function (e) {
+            e.stopPropagation();
+            $('div.s-title.active').each(function () {
+                $(this).removeClass('active').next('ul.s-options').hide();
+            });
+            $(this).toggleClass('active').next('ul.s-options').toggle();
+        });
+
+        $listItems.first().addClass('selected');
+
+        $listItems.click(function (e) {
+            e.stopPropagation();
+            $optionsTitle.text($(this).text()).removeClass('active');
+            $this.val($(this).attr('rel'));
+            $list.hide();
+            $listItems.removeClass('selected');
+            $(this).addClass('selected');
+        });
+
+        $(document).click(function () {
+            $optionsTitle.removeClass('active');
+            $list.hide();
+        });
+    });
+});</pre>
+                            </div>
+                        </div>
+                        <!-- /Tab3 -->
+                        <!-- Tab4 -->
+                        <div id="form-4" style="display: block;">
+                            <div class="box-round">
+                                <ul class="list-table">
+                                    <li>
+                                        <label><input type="checkbox" id="" name=""><span>체크박스</span></label>
+                                        <label class="custom-checkbox"><input type="checkbox" id="" name=""><span>체크박스</span></label>
+
+                                        <label><input type="radio" id="" name="radio"><span>라디오</span></label>
+                                        <label class="custom-radio"><input type="radio" id="" name="radio"><span>라디오</span></label>
+                                    </li>
+                                    <li>
+                                        <label for="select1" class="blind">선택1</label>
+                                        <select id="select1" name="">
+                                            <option value="">전체</option>
+                                            <option value="">No</option>
+                                            <option value="">제목</option>
+                                        </select>
+
+                                        <label for="select2" class="blind">선택2</label>
+                                        <select id="select2" name="" class="custom-select">
+                                            <option value="">전체</option>
+                                            <option value="">No</option>
+                                            <option value="">제목</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <div class="custom-upload-file">		
+                                            <input type="text" class="u-text" readonly="readonly">
+                                            <label for="u-file" class="bt search small">파일선택</label>		
+                                            <input id="u-file" type="file">	
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-upload-file">		
+                                            <input type="text" class="u-text" readonly="readonly">
+                                            <label for="u-image-file" class="bt search small">파일선택</label>		
+                                            <input id="u-image-file" type="file">	
+                                            
+                                            <div class="u-preview">
+                                                <img class="u-image-preview" src="images/thumb/img_upload.jpg">
+                                                <input type="hidden" class="u-image-base64">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /Tab4 -->
+                    </div>
+                </div>
+            </section>
+            <!-- /폼 -->
+
+            <!-- 탭 -->
+            <section id="tab-tab">
+                <h4 class="title">탭</h4>
+                <div class="sub-cont">
+                    <!-- Tab Menu -->
+                    <nav class="tab-menu type2">
+                        <button type="button" rel="tab-1">HTML</button>
+                        <button type="button" rel="tab-2">CSS</button>
+                        <button type="button" rel="tab-3">JS</button>
+                        <button type="button" rel="tab-4" class="current">결과보기</button>
+                    </nav>
+                    <!-- /Tab Menu -->
+
+                    <div class="tab-content">
+                        <!-- Tab1 -->
+                        <div id="tab-1">
+                            <div class="preview">
+                                <pre><span class="txt-green">&lt;!-- Tab Menu --&gt;</span>
+&lt;nav class="tab-menu"&gt;
+    &lt;button type="button" rel="tab3-4-1" class="current">Tab1&lt;/button&gt;
+    &lt;button type="button" rel="tab3-4-2">Tab2&lt;/button&gt;
+    &lt;button type="button" rel="tab3-4-3">Tab3&lt;/button&gt;
+    &lt;button type="button" rel="tab3-4-4">Tab4&lt;/button&gt;
+    &lt;button type="button" rel="tab3-4-5">Tab5&lt;/button&gt;
+&lt;/nav&gt;
+<span class="txt-green">&lt;!-- /Tab Menu --&gt;</span>
+
+&lt;article class="tab-content"&gt;
+    <span class="txt-green">&lt;!-- Tab1 --&gt;</span>
+    &lt;section id="tab3-1-1" style="display: block;"&gt;
+        내용
+    &lt;/section&gt;
+    <span class="txt-green">&lt;!-- /Tab1 --&gt;</span>
+    <span class="txt-green">&lt;!-- Tab2 --&gt;</span>
+    &lt;section id="tab3-1-2"&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;Tab2 내용
+    &lt;/section&gt;
+    <span class="txt-green">&lt;!-- /Tab2 --&gt;</span>
+    <span class="txt-green">&lt;!-- Tab3 --&gt;</span>
+    &lt;section id="tab3-1-3"&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;Tab3 내용
+    &lt;/section&gt;
+    <span class="txt-green">&lt;!-- /Tab3 --&gt;</span>
+    <span class="txt-green">&lt;!-- Tab4 --&gt;</span>
+    &lt;section id="tab3-1-4"&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;Tab4 내용
+    &lt;/section&gt;
+    <span class="txt-green">&lt;!-- /Tab4 --&gt;</span>
+    <span class="txt-green">&lt;!-- Tab5 --&gt;</span>
+    &lt;section id="tab3-1-5"&gt;
+        Tab5 내용
+    &lt;/section&gt;
+    <span class="txt-green">&lt;!-- /Tab5 --&gt;</span>
+&lt;/article&gt;</pre>
+                            </div>
+                        </div>
+                        <!-- /Tab1 -->
+                        <!-- Tab2 -->
+                        <div id="tab-2">
+                            <div class="preview">
+                                <pre><span class="txt-green">/* Tab */</span>
+nav.tab-menu {
+	width: 100%;
+    height: 35px;
+	margin-bottom: 30px;
+	border: 1px solid #e7ebed;
+    background-color: #f5f5f5;  
+}
+nav.tab-menu button {
+    float: left;
+    height: 35px;
+    padding: 0 20px;
+	color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;   
+}
+nav.tab-menu button:focus,
+nav.tab-menu button:hover,
+nav.tab-menu button:active,
+nav.tab-menu button.current {
+    color: #00a1e0;
+}
+nav[class^="tab-menu ea"] button {
+    padding: 0px;
+}
+nav.tab-menu.ea2 button {   
+	width: 50%;
+}
+nav.tab-menu.ea3 button {   
+	width: 33.3%;
+}
+nav.tab-menu.ea3 button:first-child {   
+	width: 33.4%;
+}
+nav.tab-menu.ea4 button {   
+	width: 25%;
+}
+nav.tab-menu.ea5 button {   
+	width: 20%;
+}
+nav.tab-menu.ea6 button {   
+	width: 16.6%;
+}
+nav.tab-menu.ea6 button:first-child {   
+	width: 17%;
+}
+nav.tab-menu.ea7 button {   
+	width: 14.2%;
+}
+nav.tab-menu.ea7 button:first-child {   
+	width: 14.8%;
+}
+nav.tab-menu.ea8 button {   
+	width: 12.5%;
+}
+.tab-content > section,
+.tab-content > div {
+	display: none;
+}</pre>
+                            </div>             
+                        </div>
+                        <!-- /Tab2 -->
+                        <!-- Tab3 -->
+                        <div id="tab-3">
+                            <div class="preview">
+                                <pre>
+$(document).ready(function(){
+    <span class="txt-green">// Tab</span>
+    $('nav.tab-menu button').click(function(e) {
+        e.preventDefault();
+        $(this).parent().children().removeClass('current');
+        $(this).addClass('current');
+        $(this).parent().siblings('.tab-content').children().hide();
+        var activeTab = $(this).attr('rel');
+        $('#'+activeTab).fadeIn();		
+    }); 
+});</pre>
+                            </div>
+                        </div>
+                        <!-- /Tab3 -->
+                        <!-- Tab4 -->
+                        <div id="tab-4" style="display: block;">
+                            <div class="box-round">
+                                <!-- Tab Menu -->
+                                <nav class="tab-menu type2">
+                                    <button type="button" rel="tab3-4-1" class="current">Tab1</button>
+                                    <button type="button" rel="tab3-4-2">Tab2</button>
+                                    <button type="button" rel="tab3-4-3">Tab3</button>
+                                    <button type="button" rel="tab3-4-4">Tab4</button>
+                                    <button type="button" rel="tab3-4-5">Tab5</button>
+                                </nav>
+                                <!-- /Tab Menu -->
+
+                                <div class="tab-content">
+                                    <!-- Tab1 -->
+                                    <div id="tab3-4-1" style="display: block;">
+                                        내용
+                                    </div>
+                                    <!-- /Tab1 -->
+                                    <!-- Tab2 -->
+                                    <div id="tab3-4-2">
+                                        Tab2 내용
+                                    </div>
+                                    <!-- /Tab2 -->
+                                    <!-- Tab3 -->
+                                    <div id="tab3-4-3">
+                                        Tab3 내용
+                                    </div>
+                                    <!-- /Tab3 -->
+                                    <!-- Tab4 -->
+                                    <div id="tab3-4-4">
+                                        Tab4 내용
+                                    </div>
+                                    <!-- /Tab4 -->
+                                    <!-- Tab5 -->
+                                    <div id="tab3-4-5">
+                                        Tab5 내용
+                                    </div>
+                                    <!-- /Tab5 -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Tab3 -->
+                    </div>
+                </div>
+            </section>
+            <!-- /탭 -->
+
+            <!-- 검색 -->
+            <section id="tab-search">
+                <h4 class="title">검색</h4>
+                <div class="sub-cont">
+                    <!-- Tab Menu -->
+                    <nav class="tab-menu type2">
+                        <button type="button" rel="search-1">HTML</button>
+                        <button type="button" rel="search-2">CSS</button>
+                        <button type="button" rel="search-3">JS</button>
+                        <button type="button" rel="search-4" class="current">결과보기</button>
+                    </nav>
+                    <!-- /Tab Menu -->
+
+                    <div class="tab-content">
+                        <!-- Tab1 -->
+                        <div id="search-1">
+                            <div class="preview">
+                                <pre><span class="txt-green">&lt;!-- Search Simple --&gt;</span>
+&lt;div class="search-form simple"&gt;
+    &lt;form action=""&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;리스트 검색&lt;/legend&gt;
+            &lt;label for="s-type" class="blind"&gt;구분&lt;/label&gt;
+            &lt;select id="s-type" name="w-type"&gt;
+                &lt;option value=""&gt;전체&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;label for="s-input" class="blind"&gt;검색어 입력&lt;/label&gt;
+            &lt;input type="text" id="s-input" name="s-input" value=""&gt;
+            &lt;button type="button" class="bt search small"&gt;검색&lt;/button&gt;	
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+    &lt;p class="count"&gt;게시글 수 &lt;em&gt;17&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+<span class="txt-green">&lt;!-- /Search Simple --&gt;</span>
+
+<span class="txt-green">&lt;!-- Search --&gt;</span>
+&lt;div class="search-form"&gt;	
+    &lt;form&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;검색&lt;/legend&gt;		
+        &lt;table&gt;
+            &lt;caption&gt;검색 테이블&lt;/caption&gt;
+            &lt;colgroup&gt;
+                &lt;col width="50px"&gt;
+                &lt;col width="300px"&gt;
+                &lt;col width="50px"&gt;
+                &lt;col width="280px"&gt;
+                &lt;col width=""&gt;
+            &lt;/colgroup&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;기간&lt;/th&gt;
+                    &lt;td class="search-date"&gt;
+                        &lt;span class="s-date"&gt;
+                            &lt;input type="text" id="w-date-start" name="w-date" value="" class="datepicker"&gt;
+                            &lt;label for="w-date" class="blind"&gt;조회기간 설정 시작일&lt;/label&gt;
+                        &lt;/span&gt;
+                        &lt;i&gt;-&lt;/i&gt;
+                        &lt;span class="s-date"&gt;
+                            &lt;input type="text" id="w-date-end" name="w-date-end" value="" class="datepicker"&gt;
+                            &lt;label for="w-date-end" class="blind"&gt;조회기간 설정 종료일&lt;/label&gt;
+                        &lt;/span&gt;
+                    &lt;/td&gt;
+                    &lt;th&gt;&lt;label for="w-word"&gt;검색어&lt;/label&gt;&lt;/th&gt;
+                    &lt;td&gt;
+                        &lt;label for="w-assort" class="blind"&gt;분류&lt;/label&gt;
+                        &lt;select id="w-assort" name="w-assort"&gt;
+                            &lt;option value=""&gt;전체&lt;/option&gt;
+                            &lt;option value=""&gt;No&lt;/option&gt;
+                            &lt;option value=""&gt;제목&lt;/option&gt;
+                        &lt;/select&gt;
+                        &lt;input type="text" id="w-word" name="w-word" value=""&gt;
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        &lt;button type="button" class="bt search small"&gt;검색&lt;/button&gt;
+                        &lt;button type="button" class="bt excel small"&gt;엑셀다운로드&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;	
+        &lt;p class="important"&gt;*완료시간 기준으로 검색됩니다.&lt;/p&gt;
+    &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+<span class="txt-green">&lt;!-- /Search --&gt;</span></pre>
+                            </div>
+                        </div>
+                        <!-- Tab1 -->
+                        <!-- Tab2 -->
+                        <div id="search-2">
+                            <div class="preview">
+                                <pre><span class="txt-green">/* Search Form */</span>
+.search-form {
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding: 18px 20px;
+    border: 1px solid #e5e5e5; 
+    background: #f3f3f3;
+}
+.search-form th {
+    text-align: left;
+}
+.search-date i {
+    display: inline-block;
+    margin: 6px 10px;
+    vertical-align: top;
+}
+.search-date .s-date {
+    display: inline-block;
+    position: relative;
+    margin: 0px;
+}
+.search-date .s-date .datepicker {
+    width: 120px;
+    padding-right: 30px;
+}
+.search-date .s-date .ui-datepicker-trigger {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    height: 30px;
+    color: #777;
+    font-size: 20px;
+}
+.count {
+    margin-bottom: 10px;
+    color: #757575;
+    font-size: 14px;
+}
+.count em {
+    color: #0a8cbc;
+    font-weight: bold;
+}
+.search-form.simple {
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+    text-align: right;
+    border: 0px;
+    background: none;
+}
+.search-form.simple .count {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+}</pre>
+                            </div>
+                        </div>
+                        <!-- Tab2 -->
+                        <!-- Tab3 -->
+                        <div id="search-3">
+                            <div class="preview">
+                                <pre>
+$(document).ready(function(){
+    <span class="txt-green">// Datepicker</span>
+    $(".datepicker").datepicker({
+        showOn: 'button',
+        buttonText: "",
+        dateFormat: 'yy년 mm월 dd일'
+    }).next(".ui-datepicker-trigger").addClass("fa fa-calendar");
+})
+
+<span class="txt-green">// Datepicker</span>
+$.datepicker.setDefaults({
+    dateFormat: 'yy-mm-dd',
+    prevText: '이전 달',
+    nextText: '다음 달',
+    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    showMonthAfterYear: true,
+    yearSuffix: '년'
+});</pre>
+                            </div>
+                        </div>
+                        <!-- Tab3 -->
+                        <!-- Tab4 -->
+                        <div id="search-4" style="display: block;">
+                            <div class="box-round">
+                                <!-- Search Simple -->
+                                <div class="search-form simple">
+                                    <form action="">
+                                        <fieldset>
+                                            <legend>리스트 검색</legend>
+                                            <label for="s-type" class="blind">구분</label>
+                                            <select id="s-type" name="w-type">
+                                                <option value="">전체</option>
+                                            </select>
+
+                                            <label for="s-input" class="blind">검색어 입력</label>
+                                            <input type="text" id="s-input" name="s-input" value="">
+                                            <button type="button" class="bt search small">검색</button>	
+                                        </fieldset>
+                                    </form>
+
+                                    <p class="count">게시글 수 <em>17</em></p>
+                                </div>
+                                <!-- /Search Simple -->
+
+                                <!-- Search -->
+                                <div class="search-form">	
+                                    <form>
+                                    <fieldset>
+                                        <legend>검색</legend>		
+                                        <table>
+                                            <caption>검색 테이블</caption>
+                                            <colgroup>
+                                                <col width="50px">
+                                                <col width="300px">
+                                                <col width="50px">
+                                                <col width="280px">
+                                                <col width="">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>기간</th>
+                                                    <td class="search-date">
+                                                        <span class="s-date"><input type="text" id="w-date-start" name="w-date" value="" class="datepicker"><label for="w-date-start" class="blind">조회기간 설정 시작일</label></span>
+                                                        <i>-</i>
+                                                        <span class="s-date"><input type="text" id="w-date-end" name="w-date-end" value="" class="datepicker"><label for="w-date-end" class="blind">조회기간 설정 종료일</label></span>
+                                                    </td>
+                                                    <th><label for="w-word">검색어</label></th>
+                                                    <td>
+                                                        <label for="w-assort" class="blind">분류</label>
+                                                        <select id="w-assort" name="w-assort">
+                                                            <option value="">전체</option>
+                                                            <option value="">No</option>
+                                                            <option value="">제목</option>
+                                                        </select>
+                                                        <input type="text" id="w-word" name="w-word" value="">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="bt search small">검색</button>
+                                                        <button type="button" class="bt excel small">엑셀다운로드</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>	
+                                        <p class="important">*완료시간 기준으로 검색됩니다.</p>
+                                    </fieldset>
+                                    </form>
+                                </div>
+                                <!-- /Search -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /검색 -->
+
+            <!-- 테이블 -->
+            <section id="tab-table"> 
+                <h4 class="title">테이블</h4>
+                <div class="sub-cont">
+                    <!-- Tab Menu -->
+                    <nav class="tab-menu type2">
+                        <button type="button" rel="table-1">HTML</button>
+                        <button type="button" rel="table-2">CSS</button>
+                        <button type="button" rel="table-3" class="current">결과보기</button>
+                    </nav>
+                    <!-- /Tab Menu -->
+
+                    <div class="tab-content">
+                        <!-- Tab1 -->
+                        <div id="table-1">
+                            <div class="preview">
+                                <pre><span class="txt-green">&lt;!-- 테이블 목록 --&gt;</span>
+&lt;div class="table-list"&gt;
+    &lt;table&gt;
+        &lt;caption class="blind"&gt;공지사항 목록&lt;/caption&gt;
+        &lt;colgroup&gt;
+            &lt;col style="width:80px;"&gt;
+            &lt;col style="width:120px;"&gt;
+            &lt;col style="width:auto"&gt;
+            &lt;col style="width:120px;"&gt;
+            &lt;col style="width:120px;"&gt;
+            &lt;col style="width:90px;"&gt;
+            &lt;col style="width:90px;"&gt;
+        &lt;/colgroup&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;번호&lt;/th&gt;
+                &lt;th scope="col"&gt;구분&lt;/th&gt;
+                &lt;th scope="col"&gt;제목&lt;/th&gt;
+                &lt;th scope="col"&gt;담당부서&lt;/th&gt;
+                &lt;th scope="col"&gt;등록일&lt;/th&gt;
+                &lt;th scope="col"&gt;첨부파일&lt;/th&gt;
+                &lt;th scope="col"&gt;조회수&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;!-- loop --&gt;
+            &lt;tr&gt;
+                &lt;td&gt;2&lt;/td&gt;
+                &lt;td&gt;-&lt;/td&gt;
+                &lt;td class="subject"&gt;&lt;a href="#"&gt;제목 입니다.&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;-&lt;/td&gt;
+                &lt;td&gt;2015.07.30&lt;/td&gt;
+                &lt;td&gt;&lt;span class="blind"&gt;첨부파일 없음&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;2&lt;/td&gt;
+            &lt;/tr&gt;
+             &lt;!-- /loop --&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1&lt;/td&gt;
+                &lt;td&gt;-&lt;/td&gt;
+                &lt;td class="subject"&gt;&lt;a href="#"&gt;제목 입니다.&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;-&lt;/td&gt;
+                &lt;td&gt;2015.07.30&lt;/td&gt;
+                &lt;td&gt;&lt;i class="fa fa-file"&gt;&lt;/i&gt;&lt;span class="blind"&gt;첨부파일 있음&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;10&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+<span class="txt-green">&lt;!-- /테이블 목록 --&gt;</span>
+
+<span class="txt-green">&lt;!-- 테이블 상세 --&gt;</span>
+&lt;div class="table-view"&gt;
+    &lt;h3 class="title-table"&gt;공지사항 상세&lt;/h3&gt;
+    &lt;table&gt;
+        &lt;caption class="blind"&gt;공지사항 상세&lt;/caption&gt;
+        &lt;colgroup&gt;
+            &lt;col style="width:150px;"&gt;
+            &lt;col&gt;
+            &lt;col style="width:150px;"&gt;
+            &lt;col&gt;
+        &lt;/colgroup&gt;
+        &lt;tfoot&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;이전&lt;i class="fa fa-angle-up"&gt;&lt;/i&gt;&lt;/th&gt;
+                &lt;td colspan="3" class="subject"&gt;&lt;a href="#"&gt;이전목록&lt;/a&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;다음&lt;i class="fa fa-angle-down"&gt;&lt;/i&gt;&lt;/th&gt;
+                &lt;td colspan="3" class="subject"&gt;&lt;a href="#"&gt;다음목록&lt;/a&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tfoot&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;구분&lt;/th&gt;
+                &lt;td colspan="3"&gt;-&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;등록일자&lt;/th&gt;
+                &lt;td&gt;-&lt;/td&gt;
+                &lt;th scope="row"&gt;조회수&lt;/th&gt;
+                &lt;td&gt;-&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;담당자&lt;/th&gt;
+                &lt;td&gt;-&lt;/td&gt;
+                &lt;th scope="row"&gt;담당부서&lt;/th&gt;
+                &lt;td&gt;-&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;이메일&lt;/th&gt;
+                &lt;td&gt;-&lt;/td&gt;
+                &lt;th scope="row"&gt;전화번호&lt;/th&gt;
+                &lt;td&gt;-&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;내용&lt;/th&gt;
+                &lt;td colspan="3" style="height:100px;"&gt;-&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;첨부파일&lt;/th&gt;
+                &lt;td colspan="3"&gt;
+                    &lt;ul class="list-file"&gt;
+                        &lt;li&gt;test-1.hwp &lt;a href="test-1.hwp" class="bt download small"&gt;다운로드&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;test-2.hwp &lt;a href="test-2.hwp" class="bt download small"&gt;다운로드&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+<span class="txt-green">&lt;!-- /테이블 상세 --&gt;</span></pre>
+                            </div>
+                        </div>
+                        <!-- /Tab1 -->
+                        <!-- Tab2 -->
+                        <div id="table-2">
+                            <div class="preview">
+                                <pre><span class="txt-green">/* Table List */</span>
+.table-list {
+    margin-bottom: 30px;
+    border-top: 2px solid #767676;
+}
+.table-list th {
+    padding: 15px;
+    color: #767676;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.table-list td {
+    padding: 15px;
+    text-align: center;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.table-list td.subject {
+    text-align: left;
+}
+.table-list td.subject a {
+    text-decoration: underline;
+}
+.table-list th:last-child,
+.table-list td:last-child {
+    border-right: none;
+}
+.table-list tbody tr:focus,
+.table-list tbody tr:hover {
+    background-color: #ecf7fc;
+}
+
+<span class="txt-green">/* Table View */</span>
+.title-table {
+    display: block;
+    height: 50px;
+    padding: 13px 32px;
+    color: #383838;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #e0e0e0;
+}
+.title-table em {
+    color: #0a8cbc;
+    font-weight: bold;
+}
+.table-view {
+    margin-bottom: 30px;
+    border-top: 2px solid #767676;
+}
+.table-view th {
+    height: 40px;
+    padding: 5px 10px 5px 30px;
+    color: #767676;
+    font-size: 13px;
+    text-align: left;
+    background-color: #f9f9f9;
+    border-left: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.table-view th .fa {
+    margin-left: 20px;
+}
+.table-view td {
+    height: 50px;
+    padding: 10px 14px;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.4em;
+    border-left: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.table-view td.subject a {
+    text-decoration: underline;
+}
+.table-view th:first-child,
+.table-view td:first-child {
+    border-left: none;
+}
+.table-view tr:last-child th,
+.table-view tr:last-child td {
+    border-bottom: 1px solid #767676;
+}</pre>
+                            </div>
+                        </div>
+                        <!-- /Tab2 -->
+                        <!-- Tab3 -->
+                        <div id="table-3" style="display: block;">
+                            <div class="box-round">
+                                <!-- 테이블 목록 -->
+                                <div class="table-list">
+                                    <table>
+                                        <caption class="blind">공지사항 목록</caption>
+                                        <colgroup>
+                                            <col style="width:80px;">
+                                            <col style="width:120px;">
+                                            <col style="width:auto">
+                                            <col style="width:120px;">
+                                            <col style="width:120px;">
+                                            <col style="width:90px;">
+                                            <col style="width:90px;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">번호</th>
+                                                <th scope="col">구분</th>
+                                                <th scope="col">제목</th>
+                                                <th scope="col">담당부서</th>
+                                                <th scope="col">등록일</th>
+                                                <th scope="col">첨부파일</th>
+                                                <th scope="col">조회수</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- loop -->
+                                            <tr>
+                                                <td>2</td>
+                                                <td>-</td>
+                                                <td class="subject"><a href="#">제목 입니다.</a></td>
+                                                <td>-</td>
+                                                <td>2015.07.30</td>
+                                                <td><span class="blind">첨부파일 없음</span></td>
+                                                <td>2</td>
+                                            </tr>
+                                             <!-- /loop -->
+                                            <tr>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td class="subject"><a href="#">제목 입니다.</a></td>
+                                                <td>-</td>
+                                                <td>2015.07.30</td>
+                                                <td><i class="fa fa-file"></i><span class="blind">첨부파일 있음</span></td>
+                                                <td>10</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /테이블 목록 -->
+
+                                <!-- 테이블 상세 -->
+                                <div class="table-view">
+                                    <h3 class="title-table">공지사항 상세</h3>
+                                    <table>
+                                        <caption class="blind">공지사항 상세</caption>
+                                        <colgroup>
+                                            <col style="width:150px;">
+                                            <col>
+                                            <col style="width:150px;">
+                                            <col>
+                                        </colgroup>
+                                        <tfoot>
+                                            <tr>
+                                                <th scope="row">이전<i class="fa fa-angle-up"></i></th>
+                                                <td colspan="3" class="subject"><a href="#">이전목록</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">다음<i class="fa fa-angle-down"></i></th>
+                                                <td colspan="3" class="subject"><a href="#">다음목록</a></td>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td colspan="3">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">등록일자</th>
+                                                <td>-</td>
+                                                <th scope="row">조회수</th>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">담당자</th>
+                                                <td>-</td>
+                                                <th scope="row">담당부서</th>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">이메일</th>
+                                                <td>-</td>
+                                                <th scope="row">전화번호</th>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">내용</th>
+                                                <td colspan="3" style="height:100px;">-</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">첨부파일</th>
+                                                <td colspan="3">
+                                                    <ul class="list-file">
+                                                        <li>test-1.hwp <a href="test-1.hwp" class="bt download small">다운로드</a></li>
+                                                        <li>test-2.hwp <a href="test-1.hwp" class="bt download small">다운로드</a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /테이블 상세 -->
+                            </div>
+                        </div>
+                        <!-- /Tab3 -->
+                    </div>
+                </div>
+            </section>
+            <!-- 테이블 -->
+
+            <!-- 리스트 -->
+            <section id="tab-list"> 
+                <h4 class="title">리스트</h4>
+                <div class="sub-cont">                
+
+                    <!-- Tab Menu -->
+                    <nav class="tab-menu type2">
+                        <button type="button" rel="list-1">HTML</button>
+                        <button type="button" rel="list-2">CSS</button>
+                        <button type="button" rel="list-3" class="current">결과보기</button>
+                    </nav>
+                    <!-- /Tab Menu -->
+
+                    <div class="tab-content">
+                        <!-- Tab1 -->
+                        <div id="list-1">
+                            <div class="preview">
+                                <pre><span class="txt-green">&lt;!-- 리스트1 --&gt;</span>
+&lt;ul class="list-dot"&gt;
+    &lt;li&gt;리스트1&lt;/li&gt;
+    &lt;li&gt;리스트1&lt;/li&gt;
+    &lt;li&gt;리스트1&lt;/li&gt;
+&lt;/ul&gt;
+<span class="txt-green">&lt;!-- /리스트1 --&gt;</span>
+
+<span class="txt-green">&lt;!-- 리스트2 --&gt;</span>
+&lt;ul class="list-hyphen"&gt;
+    &lt;li&gt;리스트2&lt;/li&gt;
+    &lt;li&gt;리스트2&lt;/li&gt;
+    &lt;li&gt;리스트2&lt;/li&gt;
+&lt;/ul&gt;
+<span class="txt-green">&lt;!-- /리스트2 --&gt;</span></pre>
+                            </div>
+                        </div>
+                        <!-- /Tab1 -->
+                        <!-- Tab2 -->
+                        <div id="list-2">
+                            <div class="preview">
+                                <pre><span class="txt-green">/* List Dot */</span>
+.list-dot {
+    margin-bottom: 15px;
+}
+.list-dot > li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    color: #555;
+}
+.list-dot > li:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0px;	
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #888;
+}
+
+<span class="txt-green">/* List Hyphen */</span>
+.list-hyphen {
+    margin-bottom: 15px;
+}
+.list-hyphen > li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    color: #555;
+}
+.list-hyphen > li:before {
+    content: '-';
+    position: absolute;
+    top: 0px;
+    left: 0px;	
+}
+</pre>
+                            </div>
+                        </div>
+                        <!-- /Tab2 -->
+                        <!-- Tab3 -->
+                        <div id="list-3" style="display: block;">
+                            <div class="box-round">
+                                <ul class="list-table">
+                                    <li>
+                                        <!-- 리스트1 -->
+                                        <ul class="list-dot">
+                                            <li>리스트1</li>
+                                            <li>리스트1</li>
+                                            <li>리스트1</li>
+                                        </ul>
+                                        <!-- /리스트1 -->
+                                    </li>
+                                    
+                                    <li>
+                                        <!-- 리스트2 -->
+                                        <ul class="list-hyphen">
+                                            <li>리스트2</li>
+                                            <li>리스트2</li>
+                                            <li>리스트2</li>
+                                        </ul>
+                                        <!-- /리스트2 -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /Tab3 -->
+                    </div>
+                </div>
+            </section>
+            <!-- /리스트 --> 
+
+            <!-- 아코디언 메뉴 -->
+            <section id="tab-accordion">   
+                <h4 class="title">아코디언메뉴</h4>
+                <div class="sub-cont">                
+
+                    <!-- Tab Menu -->
+                    <nav class="tab-menu type2">
+                        <button type="button" rel="accordion-1">HTML</button>
+                        <button type="button" rel="accordion-2">CSS</button>
+                        <button type="button" rel="accordion-3">JS</button>
+                        <button type="button" rel="accordion-4" class="current">결과보기</button>
+                    </nav>
+                    <!-- /Tab Menu -->
+
+                    <div class="tab-content">
+                        <!-- Tab1 -->
+                        <div id="accordion-1">
+                            <div class="preview">
+                                <pre><span class="txt-green">&lt;!-- 아코디언 메뉴 --&gt;</span>
+&lt;div class="menu-accordion"&gt;
+    &lt;!-- loop --&gt;
+    &lt;h3 class="a-toggle"&gt;메뉴1&lt;/h3&gt;
+    &lt;div class="a-content"&gt;
+        내용
+    &lt;/div&gt;
+    &lt;!-- /loop --&gt;
+
+    &lt;h3 class="a-toggle"&gt;메뉴2&lt;/h3&gt;
+    &lt;div class="a-content"&gt;
+        내용
+    &lt;/div&gt;
+&lt;/div&gt;
+<span class="txt-green">&lt;!-- /아코디언 메뉴 --&gt;</span></pre>
+                            </div>
+                        </div>
+                        <!-- /Tab1 -->
+                        <!-- Tab2 -->
+                        <div id="accordion-2">
+                            <div class="preview">
+                                <pre><span class="txt-green">/* Accordion */</span>
+.menu-accordion {
+    border-top: 1px solid #767676;
+    border-bottom: 1px solid #767676;
+}
+.a-toggle {
+    position: relative;
+    padding: 15px 20px;
+    border-top: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+.a-toggle:after {
+    content: "\f107";
+    position: absolute;
+    right: 20px;
+    font: normal normal normal 20px/1 FontAwesome;
+}
+.a-toggle.active {
+    color: #00a1e0;
+}
+.a-toggle.active:after {
+    content: "\f106";    
+}
+.a-content {
+    display: none;
+    padding: 20px;
+    border-top: 1px solid #e5e5e5;  
+    background-color: #f5f5f5;
+}
+.a-toggle:first-child {
+    border: 0px;
+}</pre>
+                            </div>
+                        </div>
+                        <!-- /Tab2 -->
+                        <!-- Tab3 -->
+                        <div id="accordion-3">
+                            <div class="preview">
+                                <pre>
+$(document).ready(function(){
+    <span class="txt-green">// Accordion</span>
+    var accordion_head = $('.a-toggle'),
+        accordion_body = $('.a-content');
+
+    accordion_head.first().addClass('active').next().slideDown('normal');
+    accordion_head.on('click', function(event) {
+        event.preventDefault();
+        if ($(this).hasClass('active')){
+            accordion_body.slideUp('normal');
+            $(this).removeClass('active');
+        }else {
+            accordion_body.slideUp('normal');
+            accordion_head.removeClass('active');
+            $(this).next().stop(true,true).slideDown('normal');
+            $(this).addClass('active');
+        }
+    });
+});</pre>
+                            </div>
+                        </div>
+                        <!-- /Tab3 -->
+                        <!-- Tab4 -->
+                        <div id="accordion-4" style="display: block;">
+                            <div class="box-round">
+                                <!-- 리스트1 -->
+                                <div class="menu-accordion">
+                                    <!-- loop -->
+                                    <h3 class="a-toggle">메뉴1</h3>
+                                    <div class="a-content">
+                                        내용
+                                    </div>
+                                    <!-- /loop -->
+
+                                    <h3 class="a-toggle">메뉴2</h3>
+                                    <div class="a-content">
+                                        내용
+                                    </div>
+                                </div>
+                                <!-- /리스트2 -->
+                            </div>
+                        </div>
+                        <!-- /Tab4 -->
+                    </div>
+                </div>
+            </section>
+            <!-- /아코디언 메뉴 -->  
+
+            <!-- 페이징 -->
+            <section id="tab-paging"> 
+                <h4 class="title">페이징</h4>
+                <div class="sub-cont">                
+
+                    <!-- Tab Menu -->
+                    <nav class="tab-menu type2">
+                        <button type="button" rel="paging-1">HTML</button>
+                        <button type="button" rel="paging-2">CSS</button>
+                        <button type="button" rel="paging-3" class="current">결과보기</button>
+                    </nav>
+                    <!-- /Tab Menu -->
+
+                    <div class="tab-content">
+                        <!-- Tab1 -->
+                        <div id="paging-1">
+                            <div class="preview">
+                                <pre><span class="txt-green">&lt;!-- pagination --&gt;</span>
+&lt;div class="pagination"&gt;
+    &lt;button type="button" class="first"&gt;&lt;span class="blind"&gt;처음 목록&lt;/span&gt;&lt;/button&gt;
+    &lt;button type="button" class="prev"&gt;&lt;span class="blind"&gt;이전 목록&lt;/span&gt;&lt;/button&gt;
+    &lt;button type="button" class="current"&gt;1&lt;/button&gt;
+    &lt;button type="button"&gt;2&lt;/button&gt;
+    &lt;button type="button"&gt;3&lt;/button&gt;
+    &lt;button type="button"&gt;4&lt;/button&gt;
+    &lt;button type="button"&gt;5&lt;/button&gt;
+    &lt;button type="button"&gt;6&lt;/button&gt;
+    &lt;button type="button"&gt;7&lt;/button&gt;
+    &lt;button type="button"&gt;8&lt;/button&gt;
+    &lt;button type="button"&gt;9&lt;/button&gt;
+    &lt;button type="button"&gt;10&lt;/button&gt;
+    &lt;button type="button" class="next"&gt;&lt;span class="blind"&gt;다음 목록&lt;/span&gt;&lt;/button&gt;
+    &lt;button type="button" class="last"&gt;&lt;span class="blind"&gt;마지막 목록&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+<span class="txt-green">&lt;!-- /pagination --&gt;</span></pre>
+                            </div>
+                        </div>
+                        <!-- /Tab1 -->
+                        <!-- Tab2 -->
+                        <div id="paging-2">
+                            <div class="preview">
+                                <pre><span class="txt-green">/* pagination */</span>
+.pagination {
+    text-align: center;
+}
+.pagination button {
+    display: inline-block;
+    vertical-align: top;
+    width: 24px;  
+    height: 24px; 
+    margin: 0 5px; 
+    color: #ced4da;  
+    font-size: 12px; 
+    line-height: 16px;  
+    font-weight: bold; 
+}
+.pagination button:hover {
+    color: #4c4946;
+}
+.pagination button.current {
+    color: #4c4946;
+    background: #f2f2f5;
+    border: 1px solid #e9ebee;
+}
+.pagination .first,
+.pagination .prev, 
+.pagination .next, 
+.pagination .last {
+    margin: 0;
+    background-image: url('../../images/ico/ico_pagination.png');
+    background-repeat: no-repeat;
+}
+.pagination .first {
+    background-position: 0 0;
+}
+.pagination .prev {
+    background-position: -24px 0;
+}
+.pagination .next {
+    background-position: -48px 0;
+}
+.pagination .last {
+    background-position: -72px 0;
+}
+.pagination .first[disabled] {
+    background-position: 0 -24px;
+}
+.pagination .prev[disabled] {
+    background-position: -24px -24px;
+}
+.pagination .next[disabled] {
+    background-position: -48px -24px;
+}
+.pagination .last[disabled] {
+    background-position: -72px -24px;
+}</pre>
+                            </div>
+                        </div>
+                        <!-- /Tab2 -->
+                        <!-- Tab3 -->
+                        <div id="paging-3" style="display: block;">
+                            <div class="box-round">
+                                <div class="pagination">
+                                    <button type="button" class="first" disabled><span class="blind">처음 목록</span></button>
+                                    <button type="button" class="prev" disabled><span class="blind">이전 목록</span></button>
+                                    <button type="button" class="current">1</button>
+                                    <button type="button">2</button>
+                                    <button type="button">3</button>
+                                    <button type="button">4</button>
+                                    <button type="button">5</button>
+                                    <button type="button">6</button>
+                                    <button type="button">7</button>
+                                    <button type="button">8</button>
+                                    <button type="button">9</button>
+                                    <button type="button">10</button>
+                                    <button type="button" class="next"><span class="blind">다음 목록</span></button>
+                                    <button type="button" class="last"><span class="blind">마지막 목록</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Tab3 -->
+                    </div>
+                </div>
+            </section>
+            <!-- /페이징 --> 
+        </div>
+    </article>
+    <!-- /Contents -->
+	
+    <!-- Footer -->
+    <footer>
+        <div class="inner">
+            <p>Copyright ⓒ 2017. ALLforLAND. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- /Footer -->
+	
+</body>
+</html>

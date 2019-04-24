@@ -1,0 +1,1207 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" />
+	<link rel="icon" type="image/x-icon" href="images/ico/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="images/ico/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="images/ico/favicon.ico">
+    
+	<link rel="stylesheet" type="text/css" href="src/js/libs/jQuery-ui/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="src/js/libs/mCustomScrollbar/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/map.css">
+    
+    <title>올포랜드 지도 서비스</title>
+	
+	<script type="text/javascript" src="src/js/libs/jQuery/1.12.3/jquery.min.js"></script>
+	<script type="text/javascript" src="src/js/libs/jQuery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="src/js/libs/mCustomScrollbar/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+	<script type="text/javascript" src="src/js/map.js"></script>
+	
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="src/js/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script type="text/javascript" src="src/js/libs/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body onResize="refresh()">
+<!-- aside -->
+<aside class="nav-wrap">
+	<!-- nav -->
+	<header>
+		<h1><a href="#"><span class="blind">국토정보맵</span></a><button type="button" class="bt menu mobile"><i></i><span class="blind">메뉴오픈</span></button></h1>
+		<nav class="nav">
+			<button type="button" rel="nav-panel1" class="current"><i class="ico nav1"></i><span>통합검색</span></button>
+			<button type="button" rel="nav-panel2"><i class="ico nav2"></i><span>상세검색</span></button>
+			<button type="button" rel="nav-panel3"><i class="ico nav3"></i><span>통계</span></button>
+			<button type="button" rel="panel4"><i class="ico nav4"></i><span>지명</span></button>
+		</nav>
+	</header>
+	<!-- /nav -->
+
+	<!-- 2depth -->
+	<article class="nav-depth2">
+		<!-- 통합검색 -->
+		<section id="nav-panel1">
+            <div class="inner">
+                <!-- 검색 -->
+                <div class="row">
+                    <div class="input-field map-search simple">
+                        <form action="/">
+                        <fieldset>
+                        <legend>간편검색</legend>
+                            <label for="m-search" class="blind">검색어 입력</label>
+                            <input type="search" id="m-search" name="m-search" value="" placeholder="검색어를 입력해 주세요" />
+                            <button type="submit" class="ico search"><span class="blind">검색</span></button>
+                        </fieldset>
+                        </form>
+                    </div>
+                    <p class="important">지번(명칭)/도로명/도엽명/행정구역명으로 검색할 수 있습니다.</p>
+                </div>	
+                <!-- /검색 -->
+
+                <!-- 검색결과 -->
+                <div class="search-resault">
+                    <!-- 검색결과-주소 -->
+                    <p class="total">검색결과 총<span>25</span>건</p>
+                    <div class="resault-basic custom-scrollbar">
+                        <ul>
+                            <!-- loop -->
+                            <li>
+                                <dl>
+                                    <dt><label><input type="checkbox" name="" id="" /><span>봉화산02-2095-0412</span></label></dt>
+                                    <dd><em class="type">도로명</em>서울 동대문구 사가정로 27길</dd>
+                                    <dd><em class="type">지 번</em>서울 동대문구 장안동 95-2</dd>
+                                </dl>
+                            </li>
+                            <!-- /loop -->
+                        </ul>
+                    </div>
+                    <!-- /검색결과-주소 -->
+                </div>
+                <!-- /검색결과 -->
+
+                <!-- 하단 링크 -->
+                <div class="nav-footer">
+                    <a href="#" class="btn01">지도범례 </a>
+                    <a href="#" class="btn02">이용안내</a>
+                    <a href="#" class="btn03">구입안내</a>
+                    <a href="#" class="btn04">사용자공간</a>
+                </div>
+                <!-- /하단 링크 -->
+            </div>
+            
+            <a href="#" class="nav-close">컨텐츠접기</a>
+		</section>	
+		<!-- /통합검색 -->
+		
+		<!-- 상세검색 -->
+		<section id="nav-panel2" class="tab-area">
+			<nav class="tab-menu type2">
+				<button type="button" rel="nav-panel2-1" class="current">자료<br />유형</button>
+				<button type="button" rel="nav-panel2-2">행정<br />구역</button>
+				<button type="button" rel="nav-panel2-3">도엽<br />번호</button>
+				<button type="button" rel="nav-panel2-4">자료<br />유형</button>
+			</nav>
+			
+			
+			<div class="tab-content">
+                <!-- 자료유형 -->
+				<div id="nav-panel2-1">
+                    <div class="inner">
+                        <!-- 검색 -->
+                        <div class="row">
+                            <div class="input-field">
+                                <label for="">자료유형</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">지도축척</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">타원체</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">공급자</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="d-start" class="blind">시작일</label>
+                                <div class="date"><input type="text" id="d-start" name="d-start" placeholder="시작일"></div>
+                            </div>
+                            <div class="input-field">
+                                <label for="d-end" class="blind">종료일</label>
+                                <div class="date"><input type="text" id="d-end" name="d-end" placeholder="종료일"></div>
+                            </div>
+                            <div class="input-field">
+                                <label for="m-num" class="blind">도엽번호를 입력</label>
+                                <input type="text" id="m-from" name="m-num" placeholder="도엽번호를 입력해 주세요">
+                            </div>
+                        </div>
+                        <div class="bt-area full">
+                            <button type="submit" class="bt submit">검색</button>
+                            <button type="reset" class="bt reset">초기화</button>
+                        </div>
+                        <!-- /검색 -->
+
+                        <!-- 검색결과 -->
+                        <div class="search-resault">
+                            <p class="total">검색결과 총<span>25</span>건</p>
+                            <div class="resault-basic custom-scrollbar">
+                                <ul>
+                                    <!-- loop -->
+                                    <li>
+                                        <dl>
+                                            <dt><span>지가(원)-(격자) 10KM</span></dt>
+                                            <dd><em class="type">파일명</em>vl-019004001</dd>
+                                            <dd><em class="type">기준월</em>2016년 07월</dd>
+                                        </dl>
+                                    </li>
+                                    <!-- /loop -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /검색결과 -->
+                    </div>
+				</div>
+				<!-- /자료유형 -->
+				
+				<!-- 행정구역 -->
+				<div id="nav-panel2-2" style="display:none">
+                    <div class="inner">
+                        <!-- 검색 -->
+                        <div class="row">
+                            <div class="input-field">
+                                <label for="">시도</label>
+                                <select id="" name="">
+                                <option value="" selected="selected">선택</option>
+                                <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">시군구</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="bt-area full">
+                            <button type="submit" class="bt submit">검색</button>
+                            <button type="reset" class="bt reset">초기화</button>
+                        </div>
+                        <!-- 검색 -->
+
+                        <!-- 검색결과 -->
+                        <div class="search-resault">						
+                            <!-- 검색결과-메뉴 -->
+                            <div class="resault-menu custom-scrollbar">
+                                <ul>
+                                    <li><a href="#">수지지도(<span>2</span>건)</a></li>
+                                    <li><a href="#">기본도(<span>20</span>건)</a></li>
+                                    <li><a href="#">측량역사(<span>8</span>건)</a></li>
+                                    <li><a href="#">국가기준점(<span>20</span>건)</a></li>
+                                    <li><a href="#">항공사진(<span>20</span>건)</a></li>
+                                    <li><a href="#">정사영상(<span>5</span>건)</a></li>
+                                    <li><a href="#">공개DEM(<span>20</span>건)</a></li>
+                                    <li><a href="#">해방이후 항공사진(<span>20</span>건)</a></li>
+                                    <li><a href="#">온맵(<span>20</span>건)</a></li>
+                                </ul>
+                            </div>
+                            <!-- /검색결과-메뉴 -->
+                        </div>
+                        <!-- /검색결과 -->
+                    </div>
+				</div>
+				<!-- /행정구역 -->
+				
+				<!-- 도엽번호 -->
+				<div id="nav-panel2-3" class="tab-area" style="display:none">
+				
+					<nav class="tab-menu type1 ea2">
+						<button type="button" rel="nav-panel2-3-1" class="current">도엽번호</button>
+						<button type="button" rel="nav-panel2-3-2">개별 도엽번호</button>
+					</nav>
+					
+					<div class="tab-content">
+						<!-- 도엽번호 -->
+						<div id="nav-panel2-3-1">
+                            <div class="inner">
+                                <!-- 검색 -->
+                                <div class="row">
+                                    <div class="input-field">
+                                        <label for="">자료유형</label>
+                                        <select id="" name="">
+                                            <option value="" selected="selected">선택</option>
+                                            <option value="">전체</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="">지도축척</label>
+                                        <select id="" name="">
+                                            <option value="" selected="selected">선택</option>
+                                            <option value="">전체</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="">타원체</label>
+                                        <select id="" name="">
+                                            <option value="" selected="selected">선택</option>
+                                            <option value="">전체</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="">공급자</label>
+                                        <select id="" name="">
+                                            <option value="" selected="selected">선택</option>
+                                            <option value="">전체</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="d-day" class="blind">제작일선택</label>
+                                        <div class="date"><input type="text" id="d-day" name="d-day" placeholder="제작일" /></div>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="m-num" class="blind">도엽번호를 입력</label>
+                                        <input type="text" id="m-from" name="m-num" placeholder="도엽번호를 입력해 주세요" />
+                                    </div>
+                                </div>
+                                <div class="bt-area full">
+                                    <button type="submit" class="bt submit">검색</button>
+                                    <button type="reset" class="bt reset">초기화</button>
+                                </div>
+                                <!-- /검색 -->
+                            </div>
+						</div>
+						<!-- /도엽번호 -->
+						
+						<!-- 개별도엽번호 -->
+						<div id="nav-panel2-3-2" style="display:none">
+                            <div class="inner">
+                                <!-- 검색 -->
+                                <div class="row">
+                                    <div class="input-field">
+                                        <label for="">자료유형</label>
+                                        <select id="" name="">
+                                            <option value="" selected="selected">선택</option>
+                                            <option value="">전체</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="">지도축척</label>
+                                        <select id="" name="">
+                                            <option value="" selected="selected">선택</option>
+                                            <option value="">전체</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="">타원체</label>
+                                        <select id="" name="">
+                                            <option value="" selected="selected">선택</option>
+                                            <option value="">전체</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="">도엽번호</label>
+                                        <select id="" name="">
+                                            <option value="" selected="selected">선택</option>
+                                            <option value="">전체</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="bt-area full">
+                                    <button type="submit" class="bt submit">검색</button>
+                                    <button type="reset" class="bt reset">초기화</button>
+                                </div>
+                                <!-- /검색 -->
+                            </div>
+                            <!-- /개별도엽번호 -->
+                        </div>
+					</div>
+				</div>
+				<!-- /도엽번호 -->
+				
+				<!-- 자료유형 -->
+				<div id="nav-panel2-4" style="display:none">	
+                    <div class="inner">
+                        <!-- 검색 -->
+                        <div class="row">
+                            <div class="input-field">
+                                <label for="" class="blind">X좌표</label>
+                                <input type="text" placeholder="X좌표를 입력해 주세요" />
+                            </div>
+                            <div class="input-field">
+                                <label for="" class="blind">Y좌표</label>
+                                <input type="text" placeholder="Y좌표를 입력해 주세요" />
+                            </div>
+                            <div class="input-field">
+                                <label for="">반경</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="bt-area full">
+                            <button type="submit" class="bt submit">검색</button>
+                            <button type="reset" class="bt reset">초기화</button>
+                        </div>
+                        <!-- /검색 -->
+                    </div>
+				</div>
+				<!-- /자료유형 -->
+			</div>
+			
+			<!-- 하단 링크 -->
+			<div class="nav-footer">
+				<a href="#" class="btn01">지도범례 </a>
+				<a href="#" class="btn02">이용안내</a>
+				<a href="#" class="btn03">구입안내</a>
+				<a href="#" class="btn04">사용자공간</a>
+			</div>
+			<!-- /하단 링크 -->
+            
+            <a href="#" class="nav-close">컨텐츠접기</a>
+		</section>
+		<!-- /상세검색 -->
+		
+		<!-- 통계 -->
+		<section id="nav-panel3" class="tab-area">
+		
+			<nav class="tab-menu type2">
+				<button type="button" rel="nav-panel3-1" class="current">개별<br />주택</button>
+				<button type="button" rel="nav-panel3-2"><span>건축물</span></button>
+				<button type="button" rel="nav-panel3-3">공시<br />지가</button>
+				<button type="button" rel="nav-panel3-4"><span>도로명</span></button>
+				<button type="button" rel="nav-panel3-5">인구<br />정보</button>
+			</nav>			
+			
+			<div class="tab-content">
+				<!-- 개별주택 -->
+				<div id="nav-panel3-1">
+                    <div class="inner">
+                        <!-- 검색 -->
+                        <div class="row">
+                            <div class="input-field">
+                                <label for="">연도</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">자료유형</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">시도</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">시군구</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">항목</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="bt-area full">
+                            <button type="submit" class="bt submit">검색</button>
+                            <button type="reset" class="bt reset">초기화</button>
+                        </div>
+                        <!-- /검색 -->
+                    </div>
+				</div>
+				<!-- /개별주택 -->
+				
+				<!-- 건축물 -->
+				<div id="nav-panel3-2" style="display:none">
+                    <div class="inner">
+                        <!-- 검색 -->
+                        <div class="row">
+                            <div class="input-field">
+                                <label for="">연도</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">자료유형</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">시도</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">시군구</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">항목</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="bt-area full">
+                            <button type="submit" class="bt submit">검색</button>
+                            <button type="reset" class="bt reset">초기화</button>
+                        </div>
+                        <!-- /검색 -->
+                    </div>
+				</div>
+				<!-- /건축물 -->
+				
+				<!-- 공시지가 -->
+				<div id="nav-panel3-3" style="display:none">
+                    <div class="inner">
+                        <!-- 검색 -->
+                        <div class="row">
+                            <div class="input-field">
+                                <label for="">연도</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">자료유형</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">시도</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">시군구</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">항목</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="bt-area full">
+                            <button type="submit" class="bt submit">검색</button>
+                            <button type="reset" class="bt reset">초기화</button>
+                        </div>
+                        <!-- /검색 -->
+                    </div>
+				</div>
+				<!-- /공시지가 -->
+				
+				<!-- 도로명 -->
+				<div id="nav-panel3-4" style="display:none">
+                    <div class="inner">
+                        <!-- 검색 -->
+                        <div class="row">
+                            <div class="input-field">
+                                <label for="">연도</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">자료유형</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">시도</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">시군구</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">항목</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="bt-area full">
+                            <button type="submit" class="bt submit">검색</button>
+                            <button type="reset" class="bt reset">초기화</button>
+                        </div>
+                        <!-- /검색 -->
+                    </div>
+				</div>
+				<!-- /도로명 -->
+				
+				<!-- 인구정보 -->
+				<div id="nav-panel3-5" style="display:none">
+					<div class="inner">
+                        <!-- 검색 -->
+                        <div class="row">
+                            <div class="input-field">
+                                <label for="">연도</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">자료유형</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">시도</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">시군구</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="">항목</label>
+                                <select id="" name="">
+                                    <option value="" selected="selected">선택</option>
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="bt-area full">
+                            <button type="submit" class="bt submit">검색</button>
+                            <button type="reset" class="bt reset">초기화</button>
+                        </div>
+                        <!-- /검색 -->
+                    </div>
+				</div>
+				<!-- /인구정보 -->	
+			</div>
+			
+			<!-- 하단 링크 -->
+			<div class="nav-footer">
+				<a href="#" class="btn01">지도범례 </a>
+				<a href="#" class="btn02">이용안내</a>
+				<a href="#" class="btn03">구입안내</a>
+				<a href="#" class="btn04">사용자공간</a>
+			</div>
+			<!-- /하단 링크 -->
+            
+            <a href="#" class="nav-close">컨텐츠접기</a>
+		</section>
+		<!-- /통계 -->
+
+
+		<!-- 지명 -->
+		<section id="nav-panel4" class="tab-area">
+		
+			<nav class="tab-menu type2">
+				<button type="button" rel="nav-panel4-1" class="current"><span>지명</span></button>
+				<button type="button" rel="nav-panel4-2">스토리<br />텔링</button>
+			</nav>
+			
+			<div class="tab-content">
+				<!-- 지명 -->
+				<div id="nav-panel4-1">
+					<div class="inner">
+                        <!-- 지명검색 -->
+                        <div class="row">
+                            <div class="input-field map-search simple">
+                            <form action="/">
+                            <fieldset>
+                            <legend>지명검색</legend>
+                                <label for="m-search-nt" class="blind">지명입력</label>
+                                <input type="search" id="m-search-nt" name="m-search-nt" value="" placeholder="지명을 입력해 주세요">
+                                <button type="submit" class="ico search"><span class="blind">검색</span></button>
+                            </fieldset>
+                            </form>
+                            </div>
+                        </div>
+                        <!-- /지명검색 -->
+
+                        <!-- 검색결과 -->	
+                        <div class="search-resault">
+                            <p class="total">검색결과 총<span>25</span>건</p>
+                            <!-- 검색결과-주소 -->
+                            <div class="resault-basic custom-scrollbar">
+                                <ul>
+                                    <!-- loop -->
+                                    <li onclick="showLayer('layer-place')">
+                                        <dl>
+                                            <dt><i class="ico spot">A</i><span>봉화산02-2095-0412</span></dt>
+                                            <dd><em class="type">도로명</em>서울 동대문구 사가정로 27길</dd>
+                                            <dd><em class="type">지 번</em>서울 동대문구 장안동 95-2</dd>
+                                        </dl>
+                                    </li>
+                                    <!-- /loop -->
+                                    <li onclick="showLayer('layer-place')">
+                                        <dl>
+                                            <dt><i class="ico spot current">B</i><span>봉화산02-2095-0412</span></dt>
+                                            <dd><em class="type">도로명</em>서울 동대문구 사가정로 27길</dd>
+                                            <dd><em class="type">지 번</em>서울 동대문구 장안동 95-2</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /검색결과-주소 -->
+
+                            <div class="pagination">
+                                <a href="" class="first">처음</a>
+                                <a href="" class="prev">이전</a>
+                                <strong>1</strong>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="" class="next">다음</a>
+                                <a href="" class="last">마지막</a>
+                            </div>
+                        </div>
+                        <!-- /검색결과 -->
+                    </div>
+				</div>
+				<!-- /지명 -->
+
+				<!-- 스토리텔링 -->
+				<div id="nav-panel4-2" style="display:none">
+					<div class="inner">
+                        <!-- 스토리텔링검색 -->
+                        <div class="row">
+                            <div class="input-field map-search simple">
+                            <form action="/">
+                            <fieldset>
+                                <legend>스토리텔링검색</legend>
+                                <label for="m-search-nt" class="blind">스토리텔링입력</label>
+                                <input type="search" id="m-search-nt" name="m-search-nt" value="" placeholder="스토리텔링을 입력해 주세요">
+                                <button type="submit" class="ico search"><span class="blind">검색</span></button>
+                            </fieldset>
+                            </form>
+                            </div>
+                        </div>
+                        <!-- /스토리텔링검색 -->
+
+                        <div class="search-resault custom-scrollbar">
+                            <!-- 검색결과-이미지 -->
+                            <div class="resault-thumb">
+                                <ul>
+                                    <!-- loop -->
+                                    <li onclick="showLayer('layer-story')">
+                                        <a href="#" class="thumb"><img src="images/thumb/thumb-img01.jpg" alt="올레길1코스" /></a>
+                                        <dl>
+                                            <dt><i class="ico spot">A</i><span>올레길1코스</span></dt>
+                                            <dd>올레길1코스 (시흥~광치기해변) 어쩌고 저쩌고</dd>
+                                        </dl>
+                                    </li>
+                                    <!-- /loop -->
+                                </ul>
+                            </div>
+                            <!-- /검색결과-이미지 -->
+
+                            <div class="pagination">
+                                <a href="" class="first">처음</a>
+                                <a href="" class="prev">이전</a>
+                                <strong>1</strong>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="" class="next">다음</a>
+                                <a href="" class="last">마지막</a>
+                            </div>
+                        </div>
+                        <!-- /검색결과 -->
+                    </div>
+				</div>
+			</div>
+			
+			
+			<!-- 하단 링크 -->
+			<div class="nav-footer">
+				<a href="#" class="btn01">지도범례 </a>
+				<a href="#" class="btn02">이용안내</a>
+				<a href="#" class="btn03">구입안내</a>
+				<a href="#" class="btn04">사용자공간</a>
+			</div>
+			<!-- /하단 링크 -->
+            
+            <a href="#" class="nav-close">컨텐츠접기</a>
+		</section>
+	
+
+	</article>
+	<!-- /2depth -->
+	
+
+	<!-- 3depth -->
+	<article class="nav-depth3">
+		<section class="nav-panel121">
+			<div class="inner">
+                <button type="button" id="go-prev" class="bt reset mobile arrow">이전</button>
+                <!-- 시군구선택 -->
+                <div class="row">
+                    <div class="input-field map-search simple">
+                    <form action="/">
+                    <fieldset>
+                        <legend>시군구선택</legend>
+                            <label for="m-search" class="blind">시군구선택</label>
+                            <input type="search" id="m-search" name="m-search" value="" placeholder="시군구 선택">
+                            <button type="submit" class="ico search"><span class="blind">검색</span></button>
+                        </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <!-- /시군구선택 -->
+
+                <!-- 기본검색결과 -->
+                <div class="search-resault">
+                    <p class="total">검색결과 총<span>25</span>건</p>
+                    <div class="resault-basic custom-scrollbar">
+                        <ul>
+                            <!-- loop -->
+                            <li>
+                                <dl>
+                                    <dt>유스케어광주버스터미널일대</dt>
+                                    <dd><strong>광주광역시 서구 광천동</strong><span class="bar">|</span><strong>7개년도 영상</strong></dd>
+                                    <dd class="ico-area">
+                                        <a href="#" class="ico buy"><span class="blind">바로구매</span></a>
+                                        <a href="#" class="ico cart"><span class="blind">장바구니</span></a>
+                                        <a href="#" class="ico movie"><span class="blind">영상보기</span></a>
+                                        <a href="#" class="ico view"><span class="blind">상세보기</span></a>
+                                        <a href="#" class="ico slide"><span class="blind">슬라이드</span></a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <!-- /loop -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- /기본검색결과 -->
+		
+                <div class="bt-area full">
+                    <a href="#" class="bt bt04"><i class="ico cart"></i>장바구니 담기</a>
+                    <a href="#" class="bt bt03"><i class="ico buy"></i>구매하기</a>
+                </div>
+            </div>
+        
+		</section>
+		<!-- /type01 -->
+        <button type="button" class="nav-close">컨텐츠접기</button>
+	</article>
+	<!-- /3depth -->
+</aside>
+<!-- /aside -->
+
+<!-- content -->
+<div class="map-content">
+
+	<!-- Map Header -->
+	<div class="map-header">
+        <button type="button" rel="layer-select-addr" class="address"><span>서울 동대문구 사가정로 27길4</span></button>
+        
+
+        <div class="map-select">
+            <button type="button" rel="layer-select-map" id="map">지도선택</button>
+            <button type="button" rel="layer-select-scale" id="scale">축척선택</button>
+            <button type="button" id="air" title="영상지도">영상지도</button>
+            <button type="button" id="dem" title="DEM">DEM</button>
+            <button type="button" id="base" title="지도">지도보기</button>
+            <button type="button" id="color" title="색각">색각</button>
+            <button type="button" id="white" title="백지도">백지도</button>
+            <button type="button" id="row" title="큰글자">큰글자</button>
+            <button type="button" id="eng" title="English">English</button>
+            <button type="button" rel="user-info" id="user" title="내정보">내정보</button>
+        </div>
+    </div>
+	<!-- /Map Header -->
+
+	<!-- map -->
+	<div class="map-area"><img src="images/map/map-area.jpg" alt="map" /></div>
+	<!-- /map -->
+
+	<!-- Map Control -->
+	<div class="map-control">
+		<a href="#"><img src="images/map/control-01.gif" alt="초기화" /></a>
+		<a href="#"><img src="images/map/control-02.gif" alt="전체보기" /></a>
+		<div class="control"><img src="images/map/control.gif" alt="확대축소영역" /></div>
+		<a href="#"><img src="images/map/control-03.gif" alt="이동" /></a>
+		<a href="#"><img src="images/map/control-04.gif" alt="반경측정" /></a>
+		<a href="#"><img src="images/map/control-05.gif" alt="거리측정" /></a>
+		<a href="#"><img src="images/map/control-06.gif" alt="면적측정" /></a>
+		<a href="#"><img src="images/map/control-07.gif" alt="속성조회" /></a>
+		<a href="#"><img src="images/map/control-08.gif" alt="출력" /></a>
+		<a href="#"><img src="images/map/control-09.gif" alt="확대" /></a>
+		<a href="#"><img src="images/map/control-10.gif" alt="축소" /></a>
+		<a href="#"><img src="images/map/control-11.gif" alt="지도변경조회" /></a>
+		<a href="#"><img src="images/map/control-12.gif" alt="이미지저장" /></a>
+	</div>
+	<!-- /Map Control -->
+	
+    <!-- Map Tool Bar -->
+	<div class="map-toolbar">
+        <div class="t-title">정보 검색</div>
+        <div class="t-wapper">
+            <button id="index-control" title="도엽">도엽</button>
+            <ul id="index-control-list" class="t-control-list">
+				<li><button>1:1,000</button></li>
+				<li><button>1:5,000</button></li>
+				<li><button>1:25,000</button></li>
+				<li><button>1:50,000</button></li>
+				<li><button>1:250,000</button></li>
+			</ul>
+        </div>
+        <div class="t-wapper">
+            <button id="area-control" title="영역">영역</button>
+            <ul id="area-control-list" class="t-control-list">
+				<li><button>원</button></li>
+				<li><button>사각형</button></li>
+				<li><button>다각형</button></li>
+			</ul>
+        </div>
+        <div class="t-wapper">
+            <button id="buffer-control" title="반경">반경</button>
+            <ul id="buffer-control-list" class="t-control-list">
+				<li><button>250m</button></li>
+				<li><button>1.25km</button></li>
+				<li><button>6.25km</button></li>
+				<li><button>12.5km</button></li>
+			</ul>
+        </div>
+        <div class="t-wapper">
+            <button id="address-control" title="행정경계">행정경계</button>
+            <div id="address-control-list" class="t-control-list">
+                <select class="si" size="10">
+					<option disabled="" value="" selected="">시도</option>
+					<option value="11">서울특별시</option>
+					<option value="26">부산광역시</option>
+					<option value="27">대구광역시</option>
+					<option value="28">인천광역시</option>
+					<option value="29">광주광역시</option>
+					<option value="30">대전광역시</option>
+					<option value="31">울산광역시</option>
+					<option value="36">세종특별자치시</option>
+					<option value="41">경기도</option>
+					<option value="42">강원도</option>
+					<option value="43">충청북도</option>
+					<option value="44">충청남도</option>
+					<option value="45">전라북도</option>
+					<option value="46">전라남도</option>
+					<option value="47">경상북도</option>
+					<option value="48">경상남도</option>
+					<option value="50">제주특별자치도</option>
+				</select>
+                <select class="gu" size="10">
+                    <option selected="" disabled="">시군구</option>
+                </select>
+            </div>
+        </div>
+        <div class="t-wapper" style="display: none;">
+            <button id="point-control" class="search-control" title="현재위치">현재위치</button>
+        </div>
+        <div class="t-wapper">
+        	<button id="detail-control" class="search-control" title="상세검색">상세검색</button>
+        </div>
+    </div>
+    <!-- /Map Tool Bar -->
+
+	<!-- Copyright -->	
+    <footer><strong>ⓒ 국토지리정보원 </strong><span>1:50000</span></footer>
+	<!-- /Copyright -->	
+
+	<!-- Layer - 하단 지명 -->
+	<div id="layer-place" class="layer layer-bottom">
+		<div class="head">
+			<h3><i class="ico spot">A</i>수원시(경기도 수원시)</h3>
+		</div>
+		<div class="body">			
+			<div class="place-area">
+				<h4>지명유래집</h4>
+				<div class="con custom-scrollbar">
+					도의 중앙에 위치한 시이다. 경기도의 도청이 이곳에 있다. 광교산과 세계문화유산에 등재된 화성(華城)도 이곳에 있다. 2008년 현재 장안구·권선구·팔달구·영통구의 4개 행정구, 39개 행정동, 56개 법정동으로 구분되어 있다. 『신증동국여지승람』에 수원의 옛 지명으로 매홀군(買忽郡)·수성군(水城郡)·수주(水州)·한남(漢南)·수성 등을 기록하고 있다. 매홀군(買忽郡)은 고구려 때의 지명이고, 수성군(水城郡)은 통일신라시대 때의 지명이다. 한남과 수성은 고려시대 때 사용되었던 지명이다. 『세종실록지리지』에 “고려 충선왕 때 수주목(水州牧)을 수원부(水原府)로 강등하였다.”고 기록하고 있다. 이때부터 ‘수원’이라는 지명이 사용되어, 정조 때 잠시 ‘화성(華城)’이라고 불린 때를 제외하고 계속 같은 이름으로 불리어져 왔다. ‘매홀’의 ‘매’와 ‘홀’은 각각 ‘물’과 ‘고을’을 뜻하는 고어이므로 매홀은 곧 ‘물이 많은 고을’이란 의미를 가진다. 이 의미를 한자로 표기하여 ‘수성’, ‘수주’ 혹은 ‘수원’으로 불리었다.
+				</div>
+			</div>
+		</div>
+		<button type="button" onclick="closeLayer()" class="bt close" title="레이어닫기"><span class="blind">레이어 닫기</span></button>
+	</div>
+	<!-- /Layer - 하단 지명 -->
+	
+	<!-- Layer - 스토리텔링 지명 -->
+	<div id="layer-story" class="layer layer-bottom">
+		<div class="head">
+			<h3><i class="ico spot">A</i>수원시(경기도 수원시)</h3>
+		</div>
+		<div class="body">
+			<div class="story-area">
+				<div class="thumb"><img src="images/thumb/thumb-img02.jpg" alt="스토리텔링"></div>
+				<h4>서대문 안 길과 마을(서촌)</h4>
+				<div class="con custom-scrollbar">
+					사대문 안 길과 마을(서촌) 최근 ‘북촌’에 이어 뜨고 있는 ‘서촌’에 대해서는 오해가 많다. 경복궁 서쪽의 종로구 효자동, 사직동, 통의동 일대를 흔히 ‘서촌’이라고 부르는데, 역사적인 근거가 없는 잘못된 이름이다. 2013년 8월, 종로구 지명위원회에서도 이 지역은 ‘서촌’이 아니라 ‘물이 내려오는 곳’이라는 뜻의 옛이름인 ‘상촌’ 또는 세종대왕이 태어난 마을이라는 의미로 '세종마을'로 부르자고 의결했다. <br />그렇다면 진짜 서촌은 어디일까? 조선시대 한양에는 동촌, 서촌, 남촌, 북촌이 있었는데 이것은 경북궁이 아니라 한양의 방위(方位)를 기준으로 한 지명이다. 우리가 잘 아는 ‘북촌’도 경복궁을 기준으로 볼 때는 동쪽이지만, 방위상 북쪽에 해당하기 때문에 ‘북촌’이 된 것이다.<br />진짜 서촌은 한양의 서쪽 지역, 즉 서울특별시 중구에 있는 서소문과 정동 일대다. 조선왕조실록, 연려신기술 등 조선시대 사료에도 ‘서촌’은 모두 서소문과 정동 일대라고 기록돼있다.<br />수도였다. 이성계가 개경 땅을 떠나는 것은 새로운 왕조 건설을 위해 불가피한 선택이었던 것이다.<br />하지만 귀족들이 한양 천도를 달가워했을 리 없다. 자신들의 지지기반을 잃을 것이 불 보듯 훤했기 때문이다. 그들을 설득한 명분이 바로 풍수지리였다. 국운이 다한 개경은 새 왕조에게 불길하니 서둘러 새로운 길지(吉地)를 찾아내야 한다는 것이었다. <br />우여곡절 끝에 최종 낙점된 도읍지가 바로 지금의 서울 사대문 안 쪽에 위치한 넓은 분지, 바로 한양(漢陽)이었다. <br />이성계는 몸소 현장답사를 다닐 만큼 한양 천도에 열정적이었다. 그런 그에게 가장 큰 힘을 실어준 것이 조선의 개국공신이자 최고 권력자 정도전이다. <br />학자로서, 정치가로서, 정도전에 대한 평가는 엇갈린다. 그러나 한양을 이야기할 때 정도전을 빼놓을 수 없다는 데는 모두 동의할 것이다. 우리가 익히 알고 있는 경복궁, 창덕궁 등 궁궐 이름들, 숭례문, 돈의문 등 사대문의 이름들, 그리고 도성 안의 길 이름들이 거의 대부분 정도전의 머리에서 나온 것이었다.<br />[역사] 이순신장군의 3대 해전
+				</div>
+			</div>
+		</div>
+		<button type="button" onclick="closeLayer()" class="bt close" title="레이어닫기"><span class="blind">레이어 닫기</span></button>
+	</div>
+	<!-- /Layer - 스토리텔링 -->
+    
+    <!-- Layer - 주소선택 -->
+    <div id="layer-select-addr" class="layer">
+        <div class="inner">
+            <div class="addrsel-box">
+                <ul>
+                    <li>경기도</li>
+                    <li>경상남도</li>
+                    <li>경상북도</li>
+                    <li>경상북도</li>
+                    <li>경상북도</li>
+                </ul>
+                <ul>
+                    <li>가평군</li>
+                    <li>고양시</li>
+                    <li>고양시 덕양구</li>
+                    <li>고양시 덕양구</li>
+                    <li>고양시 덕양구</li>
+                    <li>고양시 덕양구</li>
+                    <li>고양시 덕양구</li>
+                </ul>
+                <ul>
+                    <li>갈산동</li>
+                    <li>관양1동</li>
+                    <li>관양1동</li>
+                    <li>관양1동</li>
+                    <li>관양1동</li>
+                    <li>관양1동</li>
+                </ul>
+            </div>
+            <div class="bt-area">
+                <a href="#" class="bt bt04">확인</a>
+                <a href="#" class="bt reset">취소</a>
+            </div>
+        </div>
+    </div>
+    <!-- /Layer - 주소선택 -->
+    
+    <!-- Layer - 지도선택 -->
+    <div id="layer-select-map" class="layer">
+        <ul>
+            <li><label><input type="checkbox" name="" id="" /><span>수치지도</span></label></li>
+            <li><label><input type="checkbox" name="" id="mchk02" /><span>영상지도</span></label></li>
+            <li class="line"><label><input type="checkbox" name="" id="" /><span>수치+영상</span></label></li>
+            <li><label><input type="checkbox" name="" id="" /><span>수치+영상</span></label></li>
+        </ul>
+    </div>
+    <!-- /Layer - 지도선택 -->
+    
+    <!-- Layer - 축척선택 -->
+    <div id="layer-select-scale" class="layer">
+        <ul>
+            <li>1:5,000</li>
+            <li>1:50,000</li>
+            <li>1:5,000</li>
+            <li>1:5,000</li>
+            <li>1:500,000</li>
+        </ul>
+    </div>
+    <!-- /Layer - 축척선택 -->
+
+</div>
+<!-- Map Content -->
+    
+<!-- Layer - 내정보 -->
+<div id="user-info" class="layer">
+    
+    <!-- 로그인 전 
+    <div id="log-out">
+        <strong>로그인이 필요합니다.</strong>
+        <div class="bt-area">
+            <a href="#" class="bt bt03">로그인</a>
+        </div>
+    </div>
+     /로그인 전 -->
+    
+    <!-- 로그인 후 -->
+    <div id="log-in">
+        <h2 class="blind">회원정보</h2>
+
+        <nav class="user-link">
+            <a href="#"><span>홍길동님</span></a>
+            <a href="#"><span>회원정보수정</span></a>
+            <a href="#"><span>로그아웃</span></a>
+        </nav>
+
+        <div class="tab-area">
+            <nav class="tab-menu type3">
+                <button type="button" rel="nav-user1" class="current"><span>장바구니</span></button>
+                <button type="button" rel="nav-user2"><span>구매내역</span></button>
+                <button type="button" rel="nav-user3"><span>스크랩</span></button>
+            </nav>
+
+            <article class="tab-content">     
+                <!-- 장바구니 -->
+                <section id="nav-user1">
+                    <div class="inner">
+                         <div class="drop-down">
+                            <!-- loop -->
+                            <h3 class="d-toggle">수치지도(49건)</h3>
+                            <ul class="d-content">
+                                <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                                <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                                <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                                <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                            </ul>
+                            <!-- /loop -->
+
+                            <h3 class="d-toggle">기준점(489건)</h3>
+                            <ul class="d-content">
+                                <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                                <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                                <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                                <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                            </ul>
+
+                            <h3 class="d-toggle">해방이후항공사진(489건)</h3>
+                            <ul class="d-content">
+                                <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                                <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                                <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                                <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                            </ul>
+                        </div>
+                        <div class="bt-area full">
+                            <a href="#" class="bt bt04">전체선택</a>
+                            <a href="#" class="bt bt03"><i class="ico buy"></i>구매하기</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- /장바구니 -->
+
+
+                <!-- 구매내역 -->
+                <section id="nav-user2" class="tab-area" style="display:none">
+                    <nav class="tab-menu type1 ea4">
+                        <button type="button" rel="buy-tab1" class="current">전체</button>
+                        <button type="button" rel="buy-tab2">1개월</button>
+                        <button type="button" rel="buy-tab3">6개월</button>
+                        <button type="button" rel="buy-tab4">1년</button>
+                    </nav>
+                    <div class="tab-content">
+                        <div id="buy-tab1">
+                            <div class="inner">
+                                <div class="drop-down">
+                                    <!-- loop -->
+                                    <h3 class="d-toggle">수치지도(49건)</h3>
+                                    <ul class="d-content">
+                                        <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                                        <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                                        <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                                        <li><label><input type="checkbox" id="" name="" /><span>6코스/37영상</span></label></li>
+                                    </ul>
+                                    <!-- /loop -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="buy-tab2" style="display:none">
+                            <div class="inner">tab2</div>
+                        </div>
+                        <div id="buy-tab3" style="display:none">
+                            <div class="inner">tab3</div>
+                        </div>
+                        <div id="buy-tab4" style="display:none">
+                            <div class="inner">tab4</div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /구매내역 -->
+
+                <!-- 스크랩 -->
+                <section id="nav-user3" style="display:none">
+                    <div class="inner">
+                        <div class="custom-scrollbar">
+                            <ul>
+                                <li>
+                                    <p><label><input type="checkbox" id="" name="" /><span>수치지도(49건)</span></label></p>
+                                    <p class="addr">(경기도 고양시 덕양구 대서문길375 대서문길375 대서문길375)</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bt-area full">
+                            <a href="#" class="bt bt03">전체선택</a>
+                            <a href="#" class="bt bt04"><span class="ico-buy"></span>구매하기</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- /스크랩 -->
+            </article>
+        </div>
+    </div>
+    <button type="button" class="user-close">컨텐츠접기</button>
+</div>
+<!-- /Layer - 내정보 -->
+	
+</body>
+</html>

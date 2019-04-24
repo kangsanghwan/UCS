@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>MM관리 시스템 - 2018 총괄관리</title>
+    <link rel="apple-touch-icon-precomposed" href="images/ico/favicon.ico">
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+
+	<link rel="stylesheet" href="src/js/jQuery/jquery-ui.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="src/css/allfor-admin.css" />
+</head>
+<body>	
+	<!-- Header Start -->	
+	<header>
+		<h1 class="site-logo"><a href="Main.html"><i class="logo"></i>MM관리시스템</a></h1>
+		<nav>
+			<ul class="nav-depth1">
+				<li><a class="drop-down"><strong>MM관리시스템 <i class="fa fa-fw fa-chevron-down"></i></strong></a></li>
+				<li><a href="javascript:alert('준비중입니다');"><strong>인력관리</strong></a></li>
+				<li><a href="javascript:alert('준비중입니다');"><strong>프로젝트관리</strong></a></li>
+			</ul>
+			<div class="nav-depth2">
+				<label for="year-select" class="blind">년도선택</label>
+				<select id="year-select" name="year-select">
+					<option value="">2018</option>
+					<option value="">2017</option>
+					<option value="">2016</option>
+					<option value="">2015</option>
+				</select>
+				<ul>
+					<li><a href="main.html"><strong>총괄관리</strong></a></li>
+					<li><a href="javascript:alert('준비중입니다');"><strong>월별관리</strong></a></li>
+					<li><a href="javascript:alert('준비중입니다');"><strong>프로젝트관리</strong></a></li>
+				</ul>
+			</div>
+			<div class="nav-user">
+				<a href=""><i class="fa fa-user-circle-o"></i>Mypage</a>
+				<a href="login.html"><i class="fa fa-sign-in"></i>Login</a>
+				<a href="logout.html"><i class="fa fa-sign-out"></i>Logout</a>
+			</div>
+		</nav>	
+	</header>
+	<!-- Header End -->
+
+	<article class="content-wrapper">
+		<section class="content-header">
+		  	<h1>총괄관리<small>2018</small></h1>
+		  	<ol class="breadcrumb">
+				<li><i class="fa fa-home"></i> Home</li>
+				<li>관리시스템</li>
+				<li class="current">총괄관리</li>
+		  	</ol>
+		</section>
+		
+		<section class="contents">
+			<!-- Search : Start -->
+			<div class="searchbox card">				
+				<form>
+					<fieldset>
+						<label for="start-date">Date</label>
+						<input type="text" id="start-date" name="start-date" value="" />
+						<select id="" name="">
+							<option value="">Name</option>
+							<option value="">Description</option>
+							<option value="">Author</option>
+							<option value="">Date</option>
+						</select>
+
+						<label for="list-search" class="blind">검색</label>
+						<input type="search" id="list-search" name="list-search" value="" />
+						<button type="botton" class="bt black"><i class="fa fa-search"></i>검색</button>
+					</fieldset>
+				</form>
+			</div>
+			<!-- Search : End -->
+
+			<div class="card">	
+				<div class="dataTables_info" role="status" aria-live="polite"><em>1</em>/10 총 <em>57</em> 건</div>
+				<!-- List : Start -->
+				<div class="table-horizontal">
+					<table>
+						<caption>2018 총괄관리 리스트</caption>
+						<colgroup>
+							<col style="width:10px" />
+							<col style="width:*" />
+							<col style="width:*" />
+							<col style="width:*" />
+							<col style="width:*" />
+							<col style="width:*" />
+							<col style="width:*" />
+							<col style="width:*" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col"><label><input type="checkbox" name="" /><span class="blind">선택</span></laebl></th>
+								<th scope="col">Title1</th>
+								<th scope="col">Title2</th>
+								<th scope="col">Title3</th>
+								<th scope="col">Title4</th>
+								<th scope="col">Title5</th>
+								<th scope="col">Title6</th>
+								<th scope="col">Title7</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- loop -->
+							<tr>
+								<td><label><input type="checkbox" name="" /><span class="blind">선택</span></laebl></td>
+								<td>Content</td>
+								<td>Content</td>
+								<td>Content</td>
+								<td>Content</td>
+								<td>Content</td>
+								<td>Content</td>
+								<td>Content</td>
+							</tr>
+							<!-- /loop -->
+							<tr>
+								<td><label><input type="checkbox" name="" /><span class="blind">선택</span></laebl></td>
+								<td>Content</td>
+								<td>Content</td>
+								<td>Content</td>
+								<td>Content</td>
+								<td>Content</td>
+								<td>Content</td>
+								<td>Content</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- List : End -->
+				
+				
+				<div class="list-bottom">
+					<div class="btns-area float-left">
+						<input type="submit" name="" value="확인" class="bt submit">
+						<input type="reset" name="" value="취소" class="bt gray">
+						<buttom type="button" class="bt default show-layer" aria-edit-div="e-popup1"><i class="fa fa-check"></i>등록</buttom>
+						<buttom type="button" class="bt orange"><i class="fa fa-edit"></i>수정</buttom>
+						<buttom type="button" class="bt delete"><i class="fa fa-trash"></i>삭제</buttom>
+					</div>
+					
+					<!-- pagination : Start -->
+					<div class="dataTables_paginate float-right">
+						<ul class="pagination">
+							<li class="previous disabled"><a href="#" aria-controls="" data-dt-idx="0" tabindex="0">Previous</a></li>
+							<li class="current"><a href="#" aria-controls="" data-dt-idx="1" tabindex="0">1</a></li>
+							<li><a href="#" aria-controls="" data-dt-idx="2" tabindex="0">2</a></li>
+							<li><a href="#" aria-controls="" data-dt-idx="3" tabindex="0">3</a></li>
+							<li><a href="#" aria-controls="" data-dt-idx="4" tabindex="0">4</a></li>
+							<li><a href="#" aria-controls="" data-dt-idx="5" tabindex="0">5</a></li>
+							<li><a href="#" aria-controls="" data-dt-idx="6" tabindex="0">6</a></li>
+							<li class="next"><a href="#" aria-controls="" data-dt-idx="7" tabindex="0">Next</a></li>
+						</ul>
+					</div>
+					<!-- pagination : End -->
+				</div>
+			</div>
+		</section>
+		
+	</article>
+
+	<!-- Footer Start -->
+	<footer>
+		<p class="copyright"><strong>Copyright © 2018 <em>Allforland</em>.</strong> All rights reserved.</p>
+	</footer>
+	<!-- Footer End -->
+	
+	<!-- Back to Top Start -->
+	<aside><button type="button" id="top"><i class="fa fa-fw fa-caret-up"></i></button></aside>
+	<!-- Back to Top End-->
+	
+	<!-- Layer Popup Start -->
+	<div class="dim"></div>
+	
+	<!-- Sample1 Start -->
+	<section id="e-popup1" class="layer-popup">
+		<h1 class="layer-header">등록하기</h1>
+		<div class="layer-contents">
+			<!-- write : Start -->
+			<div class="table-vertical">
+				<table style="width:500px">
+					<caption>2018 총괄관리 등록</caption>
+					<colgroup>
+						<col style="width:120px" />
+						<col style="width:*" />
+					</colgroup>
+					<tbody>
+						<!-- loop -->
+						<tr>
+							<th scope="row"><lael for="w-sample1">Title1</lael></th>
+							<td><input type="text" id="w-sample1" name="w-sample1" value="" class="full" /></td>
+						</tr>
+						<!-- /loop -->
+						<tr>
+							<th scope="row"><lael for="w-sample2">Title2</lael></th>
+							<td><input type="text" id="w-sample2" name="w-sample1" value="" class="full" /></td>
+						</tr>
+						<tr>
+							<th scope="row"><lael for="w-sample3">Title3</lael></th>
+							<td>
+								<select id="w-sample3" name="w-sample3">
+								<option value="">Name</option>
+								<option value="">Description</option>
+								<option value="">Author</option>
+								<option value="">Date</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- write : End -->
+		</div>
+		<div class="layer-footer">
+			<input type="submit" name="" value="저장" class="bt submit">
+		</div>
+		<button class="bt close"><i class="fa fa-fw fa-close"></i><span class="blind">Close</span></button>		
+	</section>
+	<!-- Sample1 End -->
+	<!-- Layer Popup End -->
+	
+
+	<script type="text/javascript" src="src/js/jQuery/jquery.min.js"></script>
+	<script type="text/javascript" src="src/js/jQuery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="src/js/jQuery/allfor-admin.js"></script>	
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</body>
+</html>

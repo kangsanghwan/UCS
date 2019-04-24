@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>국토정보포털 통합관리자 - 공지사항목록</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/favicon_16.ico">
+    <link rel="shortcut icon" href="images/ico/favicon_16.ico">
+	
+    <link rel="stylesheet" type="text/css" href="resource/css/layout.css">
+	
+	<script type="text/javascript" src="resource/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="resource/js/layout.js"></script>		
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="resource/js/html5shiv.js"></script>
+        <script type="text/javascript" src="resource/js/respond.min.js"></script>
+	 <![endif]-->
+</head>
+<body>
+
+<!-- Header -->
+<header>
+	<div class="inner">
+		<h1><a href="#">국토정보 플랫폼 통합관리자</a></h1>
+		<div class="user-info">
+			<strong class="user">국토정보 님</strong>
+			<button type="button" class="bt logout">로그아웃</button>
+		</div>
+	</div>
+	<nav>
+		<ul role="menu">
+			<li class="active"><a href="#">게시판 관리</a></li>
+			<li><a href="#">정보관리</a></li>
+			<li><a href="#">OPEN API 관리</a></li>
+			<li><a href="#">통계 관리</a></li>
+			<li><a href="#">유통 관리</a></li>
+			<li><a href="#">데이터 관리</a></li>
+			<li><a href="#">기관사용자변경</a></li>
+		</ul>
+	</nav>
+</header>
+<!-- /Header -->
+
+<!-- Snb -->
+<aside id="snb">
+	<h2>게시판 관리</h2>
+	<nav>
+		<ul role="menu">
+			<li class="active"><a href="#">공지사항</a></li>
+			<li><a href="#">기준점 정보공유</a></li>
+			<li><a href="#">자료실</a></li>
+			<li><a href="#">FAQ</a></li>
+			<li><a href="#">국립공원 등산로 지도</a></li>
+			<li><a href="#">공지사항 알림</a></li>
+			<li><a href="#">극지 동영상</a></li>
+			<li><a href="#">극지사진 갤러리</a></li>
+			<li><a href="#">극지지도 내려받기</a></li>
+			<li><a href="#">GNSS 커뮤니티</a></li>
+		</ul>
+	</nav>	
+</aside>
+<!-- /Snb -->
+
+<!-- Content -->
+<div class="container">
+	<div class="content">
+		<h3>공지사항</h3>
+		
+		<!-- Location -->
+		<ol class="location">
+			<li class="home">홈</li>
+			<li>게시판관리</li>
+			<li>공지사항</li>
+		</ol>
+		<!-- /Location -->
+		
+		<section id="notice-list">
+		<!-- Search -->
+		<div class="search table">
+			<p class="title-dot fl mt-5">게시글 수 <span class="txt-blue">17</span></p>
+			<select title="서비스 구분 선택">
+				<option value="">전체</option>
+			</select>
+			<select title="검색 조건 선택">
+				<option value="">전체</option>
+			</select>
+			<input type="text" title="검색어 입력"><button class="bt search">검색</button>	
+		</div>
+		<!-- /Search -->
+		
+		<!-- 공지사항 목록 -->
+		<table class="table table-hoz">
+			<caption>공지사항 목록</caption>
+			<colgroup>
+				<col style="width:50px;">
+				<col style="width:130px;">
+				<col>
+				<col style="width:100px;">
+				<col style="width:100px;">
+				<col style="width:75px;">
+				<col style="width:60px;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>번호</th>
+					<th>서비스 구분</th>
+					<th>제목</th>
+					<th>담당부서</th>
+					<th>등록일</th>
+					<th>첨부파일</th>
+					<th>조회수</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- loop  한페이지당 10개 노출 -->
+				<tr>
+					<td><span class="txt-gray">10</span></td>
+					<td>GNSS서비스</td>
+					<td><a onclick="goDetail()">순천 위성기준점 시설 개량공사</a></td>
+					<td>국토측량과</td>
+					<td><span class="txt-gray">2015.07.30</span></td>
+					<td><i class="ico file"></i><span class="blind">첨부파일 있음</span></td>
+					<td><span class="txt-gray">10</span></td>
+				</tr>
+				<!-- /loop -->
+				<tr>
+					<td><span class="txt-gray">9</span></td>
+					<td>국토정보플랫폼</td>
+					<td><a onclick="goDetail()">웨서비스 개선(공모) 결과</a></td>
+					<td>국토측량과</td>
+					<td><span class="txt-gray">2015.07.30</span></td>
+					<td><i class="ico file"></i><span class="blind">첨부파일 있음</span></td>
+					<td><span class="txt-gray">10</span></td>
+				</tr>
+				<tr>
+					<td><span class="txt-gray">8</span></td>
+					<td>극지공간정보</td>
+					<td><a onclick="goDetail()">시스템 점검 및 모니터링 안내</a></td>
+					<td>공간영상과<br>국토측량과</td>
+					<td><span class="txt-gray">2015.07.30</span></td>
+					<td></td>
+					<td><span class="txt-gray">10</span></td>
+				</tr>
+				<tr>
+					<td><span class="txt-gray">7</span></td>
+					<td>GNSS서비스</td>
+					<td><a onclick="goDetail()">순천 위성기준점 시설 개량공사</a></td>
+					<td>국토측량과</td>
+					<td><span class="txt-gray">2015.07.30</span></td>
+					<td></td>
+					<td><span class="txt-gray">10</span></td>
+				</tr>
+				<tr>
+					<td><span class="txt-gray">6</span></td>
+					<td>GNSS서비스</td>
+					<td><a onclick="goDetail()">순천 위성기준점 시설 개량공사</a></td>
+					<td>국토측량과</td>
+					<td><span class="txt-gray">2015.07.30</span></td>
+					<td><i class="ico file"></i><span class="blind">첨부파일 있음</span></td>
+					<td><span class="txt-gray">10</span></td>
+				</tr>
+				<tr>
+					<td><span class="txt-gray">5</span></td>
+					<td>GNSS서비스</td>
+					<td><a onclick="goDetail()">순천 위성기준점 시설 개량공사</a></td>
+					<td>국토측량과</td>
+					<td><span class="txt-gray">2015.07.30</span></td>
+					<td><i class="ico file"></i><span class="blind">첨부파일 있음</span></td>
+					<td><span class="txt-gray">10</span></td>
+				</tr>
+				<tr>
+					<td><span class="txt-gray">4</span></td>
+					<td>GNSS서비스</td>
+					<td><a onclick="goDetail()">순천 위성기준점 시설 개량공사</a></td>
+					<td>국토측량과</td>
+					<td><span class="txt-gray">2015.07.30</span></td>
+					<td><i class="ico file"></i><span class="blind">첨부파일 있음</span></td>
+					<td><span class="txt-gray">10</span></td>
+				</tr>
+				<tr>
+					<td><span class="txt-gary">3</span></td>
+					<td>GNSS서비스</td>
+					<td><a onclick="goDetail()">순천 위성기준점 시설 개량공사</a></td>
+					<td>국토측량과</td>
+					<td><span class="txt-gray">2015.07.30</span></td>
+					<td><i class="ico file"></i><span class="blind">첨부파일 있음</span></td>
+					<td><span class="txt-gray">10</span></td>
+				</tr>
+				<tr>
+					<td><span class="txt-gray"></span>2</td>
+					<td>GNSS서비스</td>
+					<td><a onclick="goDetail()">순천 위성기준점 시설 개량공사</a></td>
+					<td>국토측량과</td>
+					<td><span class="txt-gray">2015.07.30</span></td>
+					<td><i class="ico file"></i><span class="blind">첨부파일 있음</span></td>
+					<td><span class="txt-gray">10</span></td>
+				</tr>
+				<tr>
+					<td><span class="txt-gray">1</span></td>
+					<td>GNSS서비스</td>
+					<td><a onclick="goDetail()">순천 위성기준점 시설 개량공사</a></td>
+					<td>국토측량과</td>
+					<td><span class="txt-gray">2015.07.30</span></td>
+					<td><i class="ico file"></i><span class="blind">첨부파일 있음</span></td>
+					<td><span class="txt-gray">10</span></td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- /공지사항 목록 -->
+		
+		<div class="list-bottom ar">
+			<!-- Pagination -->
+			<div class="pagination">
+				<button class="bt prev">이전</button>	
+				<ul>
+					<li class="active"><button>1</button></li>
+					<li><button>2</button></li>
+					<li><button>3</button></li>
+					<li><button>4</button></li>
+					<li><button>5</button></li>
+					<li><button>6</button></li>
+					<li><button>7</button></li>
+					<li><button>8</button></li>
+					<li><button>9</button></li>
+					<li><button>10</button></li>
+				</ul>
+				<button class="bt next">다음</button>
+			</div>
+			<!-- /Pagination -->
+			<button onclick="goWrite()" class="bt bt01">등록</button>
+		</div>
+		</section>
+		
+		<section id="notice-detail" style="display:none">
+		<!-- 공지사항 상세 -->
+		<table class="table table-ver">
+			<caption>공지사항 상세</caption>
+			<colgroup>
+				<col style="width:150px;">
+				<col>
+				<col style="width:150px;">
+				<col>
+			</colgroup>
+			<tfoot>				
+				<tr>
+					<th><span class="txt-prev">이전글</span></th>
+					<td colspan="3"><a href="#">공간정보제공 수수료 조정</a></td>
+				</tr>
+				<tr>
+					<th><span class="txt-next">다음글</span></th>
+					<td colspan="3"><a href="#">영상정보 기관 회원 신청방법 안내</a></td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td colspan="4"><span class="tableTitle">구글 크롬 설치파일</span></td>
+				</tr>
+				<tr>
+					<th>구분</th>
+					<td colspan="3">국토정보플랫폼</td>
+				</tr>
+				<tr>
+					<th>등록일자</th>
+					<td>2016.07.30</td>
+					<th>조회수</th>
+					<td>1110</td>
+				</tr>
+				<tr>
+					<th>담당자</th>
+					<td>국토정보</td>
+					<th>담당부서</th>
+					<td>국토조사과</td>
+				</tr>
+				<tr>
+					<th>이메일</th>
+					<td>asdf@email.com</td>
+					<th>전화번호</th>
+					<td>02-1234-5678</td>
+				</tr>
+				<tr>
+					<th>내용</th>
+					<td colspan="3" style="height:100px;">
+						국토정보플랫폼 헬프데스크입니다. <br>
+						지명관리시스템 일부 기능이 인터넷 익스플로러 프로그램이 제대로 실행되지 않을 때<br>
+						구글 크롬을 설치하시어 크롬으로 진행하시기 바랍니다.
+					</td>
+				</tr>
+				<tr>
+					<th>첨부파일</th>
+					<td colspan="3">
+						<ul class="add-file-list">
+							<li><span>test-1.hwp</span><button class="bt download">다운로드</button></li>
+							<li><span>test-2.hwp</span><button class="bt download">다운로드</button></li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- 공지사항 상세 -->
+		
+		<div class="list-bottom">
+			<button onclick="goList()" class="bt bt04 fl">목록</button>
+		</div>
+		</section>
+		
+		
+		<section id="notice-write" style="display:none">
+		<!-- 공지사항 등록 -->
+		<table class="table table-ver">
+			<caption>공지사항 등록</caption>
+			<colgroup>
+				<col style="width:150px;">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th><label for="list-s-select">서비스 구분</label></th>
+					<td>
+						<select id="list-s-select" name="list-s-select">
+							<option value="">선택하세요</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="list-title">제목</label></th>
+					<td><input type="text" id="list-title" name="list-title" class="full"></td>
+				</tr>
+				<tr>
+					<th><label for="list-cont">내용</label></th>
+					<td><textarea rows="20" id="list-cont" name="list-cont" class="full"></textarea></td>
+				</tr>
+				<tr>
+					<th><label for="list-file">첨부파일</label></th>
+					<td>
+						<ul class="bullet-list">
+							<li>파일첨부시 팝업차단기능이 해제 되어야 합니다.</li>
+							<li>파일은 최대 <span class="txt-blue">5</span>개의 파일이 업로드 가능합니다. (파일 1개당 최대사용량 <span class="txt-blue">2MB</span>)</li>
+						</ul>
+						<input type="file" id="list-file" name="list-file" value="" style="width:550px;"> 
+						<button class="bt bt02 table">전체삭제</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- /공지사항 등록 -->
+		
+		<div class="list-bottom">
+			<button onclick="goList()" class="bt bt04 fl">목록</button>
+			<div class="bt-area fr">
+				<button class="bt bt03">취소</button>
+				<button class="bt bt01">저장</button>
+			</div>
+		</div>
+		</section>
+		
+	</div>
+</div>
+<!-- /Content -->
+
+<!-- Footer -->
+<footer>
+	<div class="inner">
+		<p class="f-logo">국토교통부 국토지리정보원</p>
+		
+		<ul>
+			<li><a href="#" class="txt-l-blue">개인정보 처리방침</a></li>
+			<li><a href="#">저작권정책</a></li>
+			<li><a href="#">이메일무단수집거부</a></li>
+		</ul>
+		<div class="f-info">
+			<address>경기도 수원시 영통구 월드컵로 92(원천동)</address>
+			<em>전화 : </em>
+			<span>031-210-2600</span>
+			<em>팩스 : </em>
+			<span>031-210-2644</span>
+		</div>
+
+		<p class="copyright">Copyright (c) 2015 NGII ALL RIGHTS RESERVED.</p>
+
+		<select title="관련기관 바로가기" class="family-site">
+			<option value="">관련기관목록</option>
+		</select>
+	</div>
+</footer>
+<!-- /Footer -->
+
+<script type="text/javascript">
+	function goList() {
+		$('.content section').hide();
+		$('section#notice-list').show();
+	}
+	function goDetail() {
+		$('.content section').hide();
+		$('section#notice-detail').show();
+	}
+	function goWrite() {
+		$('.content section').hide();
+		$('section#notice-write').show();
+	}
+</script>
+
+</body>
+</html>

@@ -4,7 +4,7 @@
 
 html { width: 100%; overflow-x: hidden; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -o-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%; }
 
-body { min-width: 320px; font-family: "Nanum Square R", "돋움", Dotum, Helvetica, Arial, sans-serif; color: #666; font-size: 13px; background: #e7ebed; }
+body { min-width: 320px; color: #666; font-size: 13px; background: #e7ebed; }
 
 a { color: inherit; cursor: pointer; text-decoration: none; }
 
@@ -15,8 +15,6 @@ img { border: 0; vertical-align: top; }
 a, a:hover, a:active, a:visited { text-decoration: none; cursor: pointer; }
 
 a, a:hover, a:active, a:visited { text-decoration: none; cursor: pointer; }
-
-strong, b, optgroup, th, dt, h1, h2, h3, h4, h5, h6 { font-family: 'Nanum Square B', Dotum, Helvetica, Arial, sans-serif; }
 
 fieldset { border: 0; }
 
@@ -43,7 +41,7 @@ pre { overflow: auto; }
 /* Form */
 input[readonly], input[disabled], select[readonly], select[disabled], textarea[readonly], textarea[disabled] { color: #999; background-color: #eee; }
 
-input[placeholder] { color: #666; font-family: 'Nanum Barun Gothic R', Dotum, Helvetica, Arial, sans-serif; font-size: 14px; }
+input[placeholder] { color: #666; font-size: 14px; }
 
 input[type="checkbox"] + span, input[type="radio"] + span { display: inline-block; vertical-align: top; margin-left: 5px; }
 
@@ -628,9 +626,9 @@ footer p { color: #72838b; font-size: 12px; font-family: 'Nanum Square B'; }
 .contents { width: 100%; /*max-width: 840px;*/ padding: 50px 40px; box-sizing: border-box; }
 
 /* Sub Title */
-h2.sub-title { position: relative; height: 60px; padding: 16px 40px 15px 70px; color: #fff; font-size: 24px; background: #0caddf; background: -webkit-gradient(0deg, 0% 0%, 0% 100%, from(#0caddf), to(#2dd4c7)); background: -webkit-linear-gradient(0deg, #0caddf, #2dd4c7); background: -moz-linear-gradient(0deg, #0caddf, #2dd4c7); background: -ms-linear-gradient(0deg, #0caddf, #2dd4c7); background: -o-linear-gradient(0deg, #0caddf, #2dd4c7); border-radius: 10px 10px 0 0; box-sizing: border-box; }
+h2.sub-title { position: relative; height: 60px; padding: 12px 40px 25px 70px; color: #fff; font-size: 24px; background: #0caddf; background: -webkit-gradient(0deg, 0% 0%, 0% 100%, from(#0caddf), to(#2dd4c7)); background: -webkit-linear-gradient(0deg, #0caddf, #2dd4c7); background: -moz-linear-gradient(0deg, #0caddf, #2dd4c7); background: -ms-linear-gradient(0deg, #0caddf, #2dd4c7); background: -o-linear-gradient(0deg, #0caddf, #2dd4c7); border-radius: 10px 10px 0 0; box-sizing: border-box; }
 
-h2.sub-title:before { content: ''; position: absolute; top: 17px; left: 38px; vertical-align: top; width: 22px; height: 22px; background: url("../../images/guide/bu/bu_title.png") no-repeat 0 center; }
+h2.sub-title:before { content: ''; position: absolute; top: 20px; left: 38px; vertical-align: top; width: 22px; height: 22px; background: url("../../images/guide/bu/bu_title.png") no-repeat 0 center; }
 
 h3.sub-title2 { margin-bottom: 20px; color: #333; font-size: 16px; }
 

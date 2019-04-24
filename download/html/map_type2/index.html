@@ -1,0 +1,523 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" />
+	<link rel="icon" type="image/x-icon" href="images/ico/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="images/ico/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="images/ico/favicon.ico">
+    
+	<link rel="stylesheet" type="text/css" href="src/js/libs/jQuery-ui/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="src/js/libs/mCustomScrollbar/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/map.css">
+    
+    <title>올포랜드 지도 서비스</title>
+	
+	<script type="text/javascript" src="src/js/libs/jQuery/1.12.3/jquery.min.js"></script>
+	<script type="text/javascript" src="src/js/libs/jQuery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="src/js/libs/mCustomScrollbar/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+	<script type="text/javascript" src="src/js/map.js"></script>
+	
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="src/js/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script type="text/javascript" src="src/js/libs/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+</head>
+<body>
+<aside class="left">
+    <!-- Header -->
+    <header>
+        <h1><a href="#"><img src="images/common/logo.jpg" alt="공유해 MGIS Service"></a></h1>
+        <nav class="nav">
+            <button type="button" rel="nav-panel1"><i class="ico nav1"></i><span>해양공간</span></button>
+            <button type="button" rel="nav-panel2"><i class="ico nav2"></i><span>실시간</span></button>
+            <button type="button" rel="nav-panel3"><i class="ico nav3"></i><span>재난안전</span></button>
+            <button type="button" rel="nav-panel4"><i class="ico nav4"></i><span>통계</span></button>
+            <button type="button" rel="nav-panel5"><i class="ico nav5"></i><span>역사</span></button>
+            <button type="button" rel="nav-panel6"><i class="ico nav6"></i><span>분석</span></button>
+            <button type="button" rel="nav-panel7"><i class="ico nav7"></i><span>Open API</span></button>
+            <button type="button" rel="nav-panel8"><i class="ico nav8"></i><span>검색</span></button>
+        </nav>
+    </header>
+    <!-- /Header -->
+
+	<article class="nav-depth2">
+        <!-- 해양공간 -->
+        <section id="nav-panel1" style="">
+            <div class="inner">
+                <div class="drop-down">
+                    <!-- 해양산업 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>해양산업</span></a></h3>
+                        <div class="d-content">
+                            <ul class="">
+                                <li><a href="#">해양영토</a></li>
+                                <li><a href="#">항만구역</a></li>
+                                <li><a href="#">해양환경</a></li>
+                                <li><a href="#">해상훈련및사격</a></li>
+                                <li><a href="#">해양산업</a></li>
+                                <li><a href="#">해양과학조사자료</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /해양산업 -->
+
+                    <!-- 해양환경 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>해양환경</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">수산자원</a></li>
+                                <li><a href="#">어촌양식</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /해양환경 -->
+
+                    <!-- 국제원양 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>국제원양</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">지형수심</a></li>
+                                <li><a href="#">레저위험요소</a></li>
+                                <li><a href="#">항해위험요소</a></li>
+                                <li><a href="#">해상교통</a></li>
+                                <li><a href="#">군경생활</a></li>
+                                <li><a href="#">시설물정보</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /국제원양 -->
+
+                    <!-- 수산 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>수산</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">항해위험요소</a></li>	
+                            </ul>			
+                        </div>
+                    </div>
+                    <!-- /수산 -->
+
+                    <!-- 어업자원 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>어업자원</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">항로</a></li>
+                                <li><a href="#">시설물</a></li>
+                                <li><a href="#">항로표지</a></li>
+                            </ul>		
+                        </div>
+                    </div>
+                    <!-- /어업자원 -->
+
+                    <!-- 어촌양식 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>어촌양식</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">항로</a></li>
+                                <li><a href="#">시설물</a></li>
+                                <li><a href="#">항로표지</a></li>	
+                            </ul>		
+                        </div>
+                    </div>
+                    <!-- /어촌양식 -->
+
+                    <!-- 해운 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>해운</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">수산자원</a></li>
+                                <li><a href="#">어촌양식</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /해운 -->
+
+                    <!-- 항만물류 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>항만물류</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">소해구</a></li>	
+                            </ul>			
+                        </div>
+                    </div>
+                    <!-- /항만물류 -->
+
+                    <!-- 해사안전 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>해사안전</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">소해구</a></li>
+                            </ul>				
+                        </div>
+                    </div>
+                    <!-- /해사안전 -->
+
+                    <!-- 항만건설 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>항만건설</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">소해구</a></li>	
+                            </ul>			
+                        </div>
+                    </div>
+                    <!-- /항만건설 -->
+
+                    <!-- 인문사회 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>인문사회</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">소해구</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /인문사회 -->
+                </div>
+            </div>
+        </section>
+        <!-- /해양공간 -->
+
+        <!-- 실시간 -->
+        <section id="nav-panel2" style="display:none ">
+            <div class="inner">
+                <div class="drop-down">
+                    <!-- 실시간 해양관측정보 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>실시간 해양관측정보</span></a></h3>
+                        <div class="d-content">
+                            <ul class="">
+                                <li><a href="#">조위</a></li>
+                                <li><a href="#">수온</a></li>
+                                <li><a href="#">염분</a></li>
+                                <li><a href="#">기온</a></li>
+                                <li><a href="#">기압</a></li>
+                                <li><a href="#">풍향/풍속</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /실시간 해양관측정보 -->
+
+                    <!-- 실시간 선박운항정보 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>실시간 선박운항정보</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">1분마다 갱신</a></li>
+                                <li><a href="#">3분마다 갱신</a></li>
+                                <li><a href="#">5분마다 갱신</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /실시간 선박운항정보 -->
+                </div>
+            </div>
+        </section>
+        <!-- /실시간 -->
+
+        <!-- 재난안전 -->
+        <section id="nav-panel3" style="display:none;">
+            <div class="inner">
+                <div class="drop-down">
+                    <!-- 동해안 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>동해안</span></a></h3>
+                        <div class="d-content">
+                            <ul class="">
+                                <li><label><input type="checkbox" id="" name=""><span>낙산해수욕장</span></label></li>
+                                <li><label><input type="checkbox" id="" name=""><span>망상해수욕장</span></label></li>
+                                <li><label><input type="checkbox" id="" name=""><span>삼척해수욕장</span></label></li>
+                                <li><label><input type="checkbox" id="" name=""><span>송정해수욕장</span></label></li>
+                                <li><label><input type="checkbox" id="" name=""><span>일광해수욕장</span></label></li>
+                                <li><label><input type="checkbox" id="" name=""><span>진하해수욕장</span></label></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /동해안 -->
+
+                    <!-- 해양환경 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>해양환경</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">수산자원</a></li>
+                                <li><a href="#">어촌양식</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /해양환경 -->
+                </div>
+            </div>
+        </section>
+        <!-- /재난안전 -->
+
+        <!-- 통계 -->
+        <section id="nav-panel4" style="display:none;">
+            <div class="inner">
+                <div class="drop-down">
+                    <!-- 해양산업 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>해양산업</span></a></h3>
+                        <div class="d-content">
+                            <ul class="">
+                                <li><a href="#">해양영토</a></li>
+                                <li><a href="#">항만구역</a></li>
+                                <li><a href="#">해양환경</a></li>
+                                <li><a href="#">해상훈련및사격</a></li>
+                                <li><a href="#">해양산업</a></li>
+                                <li><a href="#">해양과학조사자료</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /해양산업 -->
+
+                    <!-- 해양환경 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>해양환경</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">수산자원</a></li>
+                                <li><a href="#">어촌양식</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /해양환경 -->
+                </div>
+            </div>
+        </section>
+        <!-- /통계 -->
+
+        <!-- 역사 -->
+        <section id="nav-panel5" style="display:none">
+            <div class="inner">
+                <div class="drop-down">
+                    <!-- 해양산업 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>해양산업</span></a></h3>
+                        <div class="d-content">
+                            <ul class="">
+                                <li><a href="#">해양영토</a></li>
+                                <li><a href="#">항만구역</a></li>
+                                <li><a href="#">해양환경</a></li>
+                                <li><a href="#">해상훈련및사격</a></li>
+                                <li><a href="#">해양산업</a></li>
+                                <li><a href="#">해양과학조사자료</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /해양산업 -->
+
+                    <!-- 해양환경 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>해양환경</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">수산자원</a></li>
+                                <li><a href="#">어촌양식</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /해양환경 -->
+                </div>
+            </div>
+        </section>
+        <!-- /역사 -->
+
+        <!-- 분석 -->
+        <section id="nav-panel6" style="display:none">
+            <div class="inner">
+                <ul id="tab03-sort" class="sub-tab ea3">
+                    <li id="sub-tab01-search" class="btn-sort">격자검색</li>
+                    <li id="sub-tab02-search" class="btn-sort">밀도분석</li>
+                    <li id="sub-tab03-search" class="btn-sort subtab-on">맞춤분석</li>
+                </ul>
+                <!-- 격자검색 -->
+                <div id="sub-tab01-search-area" class="sub-tab01 subt3" style="display:none;">
+                </div>
+                <!-- /격자검색 -->
+
+                <!-- 밀도분석 -->
+                <div id="sub-tab02-search-area" class="sub-tab01 subt3" style="display:none;">
+                </div>
+                <!-- /밀도분석 -->
+
+                <!-- 맞춤분석 -->
+                <div id="sub-tab03-search-area" class="sub-tab01 subt3">
+                    <ul class="step-tab">
+                        <li rel="step-tab01" class="on"><i>1</i>해양사고 모의확인</li>
+                        <li rel="step-tab02"><i>2</i>해양공간계획 MSP</li>
+                        <li rel="step-tab03"><i>3</i>어업면허 자가진단</li>
+                    </ul>
+
+                    <div class="step-tab-area">
+                        <!-- 해양사고 모의확인 -->
+                        <div id="step-tab01">
+                            <h3 class="leftTitle listMenu-icon12">
+                                사고유형
+                                <p class="fr">
+                                    <select id="openTypeAccident" name="">
+                                        <option value="">선택하세요.</option>
+                                        <option value="">선박충동/침몰/조난사고</option>
+                                        <option value="">해양오염사고</option>
+                                        <option value="">피서객 인명사고</option>
+                                    </select>
+                                </p>	
+                            </h3>
+                            <ul class="allOcean-box list-custom type-check" style="display:none;">
+                                <!-- 사고대응시설 -->
+                                <li id="allOcean2-menu01" class="allOcean2-menu01 slide">
+                                    <a href="#"><span class="oceanTi listMenu-icon01">사고대응시설</span> <span><img src="images/left/btn-allocean.gif" alt="메뉴클릭버튼"></span></a>
+                                </li>
+                                <li id="allOcean2-menu01-leftSub" style="display: none;">
+                                    <dl class="l-subMunu">
+                                        <dt class="listMenu-on slide"><a href="#"><span class="oceanTi listMenu-icon01">사고대응시설</span> <span><img src="images/left/btn-allocean-on.gif" alt="메뉴클릭버튼"></span></a></dt>
+                                        <span class="submenu01-icon01"><a href="#"><label class="custom-checkbox"><input type="checkbox" name="" checked disabled></label>지형수심</a></span>
+                                        <span class="submenu01-icon02"><a href="#"><label class="custom-checkbox"><input type="checkbox" name="" disabled></label>항해위험요소</a></span>
+                                        <span class="submenu01-icon03"><a href="#"><label class="custom-checkbox"><input type="checkbox" name="" checked disabled></label>군경활동</a></span>
+                                        <span class="submenu01-icon04"><a href="#"><label class="custom-checkbox"><input type="checkbox" name="" checked disabled></label>레저위험요소</a></span>
+                                        <span class="submenu01-icon05"><a href="#"><label class="custom-checkbox"><input type="checkbox" name="" disabled></label>해상교통</a></span>
+                                        <span class="submenu01-icon06"><a href="#"><label class="custom-checkbox"><input type="checkbox" name="" disabled></label>시설물정보</a></span>
+                                    </dl>
+                                </li>
+                                <!-- /사고대응시설 -->
+
+                                <!-- 위험요소 -->
+                                <li id="allOcean2-menu02" class="allOcean2-menu02 slide"><a href="#"><span class="oceanTi listMenu-icon02">위험요소</span>  <span><img src="images/left/btn-allocean.gif" alt="메뉴클릭버튼"></span></a></li>
+                                <li id="allOcean2-menu02-leftSub" style="display: none;">
+                                    <dl class="l-subMunu">
+                                        <dt class="listMenu-on slide"><a href="#"><span class="oceanTi listMenu-icon02">위험요소</span> <span><img src="images/left/btn-allocean-on.gif" alt="메뉴클릭버튼"></span></a></dt>
+                                        <span class="submenu02-icon01 lMenu-r-line"><a href="#">수산자원</a></span><span class="submenu02-icon02"><a href="#">어촌양식</a></span>
+                                    </dl>
+                                </li>
+                                <!-- /위험요소 -->
+                                <!-- /위험요소 -->
+
+                                <!-- 자연공원 -->
+                                <li id="allOcean2-menu03" class="allOcean2-menu03 slide"><a href="#"><span class="oceanTi listMenu-icon03">자연공원</span> <span><img src="images/left/btn-allocean.gif" alt="메뉴클릭버튼"></span></a></li>
+                                <li id="allOcean2-menu03-leftSub" style="display: none;">
+                                    <dl class="l-subMunu">
+                                        <dt class="listMenu-on slide"><a href="#"><span class="oceanTi listMenu-icon03">자연공원</span> <span><img src="images/left/btn-allocean-on.gif" alt="메뉴클릭버튼"></span></a></dt>
+                                        <span class="submenu03-icon01 lMenu-r-line"><a href="#">지형수심</a></span><span class="submenu03-icon02"><a href="#">레저위험요소</a></span>
+                                    </dl>
+                                </li>
+                                <!-- /자연공원 -->
+                            </ul>
+
+                            <h3 class="leftTitle listMenu-icon12">
+                                사고유형
+                                <p class="fr">
+                                    <select id="openTypeAccident" name="">
+                                        <option value="">선택하세요.</option>
+                                        <option value="">선박충동/침몰/조난사고</option>
+                                        <option value="">해양오염사고</option>
+                                        <option value="">피서객 인명사고</option>
+                                    </select>
+                                </p>	
+                            </h3>
+                        </div>
+                        <!-- /해양사고 모의확인 -->
+
+                        <!-- 해양공간계획 MSP -->
+                        <div id="step-tab02">
+
+                        </div>
+                        <!-- /해양공간계획 MSP -->
+
+                        <!-- 어업면허 자가진단 -->
+                        <div id="step-tab03">
+
+                        </div>
+                        <!-- /어업면허 자가진단 -->
+                    </div>
+                </div>
+                <!-- /맞춤분석 -->
+            </div>
+        </section>	
+        <!-- /분석  -->
+
+        <!-- Open Api -->
+        <section id="nav-panel7" style="display:none">
+            <div class="inner">
+                <div class="drop-down">
+                    <!-- 해양산업 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>해양산업</span></a></h3>
+                        <div class="d-content">
+                            <ul class="">
+                                <li><a href="#">해양영토</a></li>
+                                <li><a href="#">항만구역</a></li>
+                                <li><a href="#">해양환경</a></li>
+                                <li><a href="#">해상훈련및사격</a></li>
+                                <li><a href="#">해양산업</a></li>
+                                <li><a href="#">해양과학조사자료</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /해양산업 -->
+
+                    <!-- 해양환경 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>해양환경</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">수산자원</a></li>
+                                <li><a href="#">어촌양식</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /해양환경 -->
+                </div>
+            </div>
+        </section>
+        <!-- /Open Api -->
+
+        <!-- 검색 -->	
+        <section id="nav-panel8" style="display:none">
+            <div class="inner">
+                <div class="drop-down">
+                    <!-- 해양산업 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>해양산업</span></a></h3>
+                        <div class="d-content">
+                            <ul class="">
+                                <li><a href="#">해양영토</a></li>
+                                <li><a href="#">항만구역</a></li>
+                                <li><a href="#">해양환경</a></li>
+                                <li><a href="#">해상훈련및사격</a></li>
+                                <li><a href="#">해양산업</a></li>
+                                <li><a href="#">해양과학조사자료</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /해양산업 -->
+
+                    <!-- 해양환경 -->
+                    <div class="d-wrap">
+                        <h3 class="d-toggle"><a href="#"><span>해양환경</span></a></h3>
+                        <div class="d-content">
+                            <ul>
+                                <li><a href="#">수산자원</a></li>
+                                <li><a href="#">어촌양식</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /해양환경 -->
+                </div>
+            </div>
+        </section>
+        <!-- /검색 -->
+    </article>
+</aside>
+</body>
+</html>
