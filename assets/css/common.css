@@ -1,0 +1,65 @@
+@charset "UTF-8";
+.inner { max-width: 1020px; margin: 0 auto; }
+
+.comm-p { padding: 0 15px; }
+
+/*
+** PROGRASS
+*/
+#docLoad { display: none; position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; z-index: 200; }
+#docLoad .background-effic { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+#docLoad .bg-1 { z-index: 10; background-color: #fff; }
+#docLoad .bg-2 { z-index: 9; background-color: gray; }
+
+/* 기본구조 */
+html, body { height: 100%; width: 100%; }
+
+/* 
+* 구조 : Header 
+*/
+/* 
+* 구조 : Nav 
+*/
+.ci { position: fixed; left: 55px; top: 55px; z-index: 20; }
+.ci a { display: block; width: 35px; height: 35px; background: url(../../images/brand.png); }
+
+.hamburger { position: fixed; right: 55px; top: 55px; z-index: 20; }
+.hamburger #hamburger { display: block; position: relative; width: 16px; height: 10px; }
+.hamburger #hamburger span { display: block; width: 16px; height: 2px; background-color: #fff; transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+.hamburger #hamburger span.line-1 { transform-origin: 0 0; margin-bottom: 6px; }
+.hamburger #hamburger:hover .line-1 { transform: rotateZ(-45deg) translate(-4px, 3px); }
+.hamburger #hamburger:hover .line-2 { transform: rotateZ(45deg) translate(-7px, -5px); }
+
+#nav { position: fixed; width: 100vw; height: 100vh; z-index: -1; display: none; }
+#nav ul { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; }
+#nav ul li { padding: 1vw; opacity: 0; position: relative; left: -5%; }
+#nav ul li a { display: block; color: #fff; font-size: 2vw; text-transform: uppercase; }
+#nav ul li a:hover { color: transparent; -webkit-text-stroke: 1px #fff; }
+
+.gnb_dimmed { position: fixed; z-index: -1; top: 0; left: 0; width: 100%; height: 100vh; pointer-events: none; background-color: transparent; border: 0 solid #000; box-sizing: border-box; -webkit-transition: border .3s ease-in, background 0s linear; transition: border .3s ease-in, background 0s linear; }
+
+.gnb-open #nav { z-index: 5; display: block; }
+.gnb-open .gnb_dimmed { z-index: 4; border-width: 50vh 50vw !important; background-color: #000; -webkit-transition: border .3s ease-in, background 0s linear .3s; transition: border .3s ease-in, background 0s linear .3s; }
+
+/*
+** 서브레이아웃
+*/
+.content-head { position: relative; margin-top: 50px; }
+.content-head .inner { position: relative; }
+.content-head h1 { font-family: "Baskerville Old Face"; color: #202020; font-size: 48px; line-height: 1; }
+.content-head p { color: #626262; font-family: ''; font-size: 15px; padding: 15px 0 0; margin-bottom: 55px; }
+.content-head p a { padding-bottom: 5px; border-bottom: 1px solid #626262; }
+.content-head .fullname { position: absolute; right: 0; top: 0; animation-duration: 0.5s; animation-timing-function: ease-in; animation-name: width_full; }
+.content-head .fullname span { color: #bbbbbb; font-weight: bold; font-size: 18px; }
+.content-head .fullname span strong { color: #1c9dce; }
+.content-head .head-line { position: absolute; right: 0; top: 15px; height: 1px; width: 22%; background-color: #eee; animation-duration: 0.5s; animation-timing-function: ease-in; animation-name: width_full; }
+@keyframes width_full { from { width: 0; }
+  50% { width: 11%; }
+  to { width: 22%; } }
+.content-wrap { margin: 0 auto; max-width: 1020px; }
+
+.nav-page { height: 55px; background-color: #000; }
+.nav-page .ci { top: 10px; }
+.nav-page .hamburger { top: 22px; }
+
+/*# sourceMappingURL=common.css.map */

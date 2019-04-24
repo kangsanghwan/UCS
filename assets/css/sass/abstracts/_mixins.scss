@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+
+@mixin bg($url){
+	background-image: url(../../images/#{$url});
+}
+
+@mixin font_awesome(){
+	font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
