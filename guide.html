@@ -23,8 +23,11 @@
 	<link rel="stylesheet" href="assets/css/base.css">
 	<link rel="stylesheet" href="assets/css/common.css">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/guide.css">
 	<!-- 기본 스크립트 -->
 	<script src="assets/js/jquery-1.12.4.min.js"></script>
+	<!-- ui gudide기본 스크립트 -->
+	<script src="assets/js/guide-ui.js"></script>
 	<!-- 스크립트 : 지원성격의 플러그인 -->
 	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
 	<script src="assets/js/js.cookie.js"></script>
@@ -84,7 +87,7 @@
 
 		<header class="content-head">
 			<div class="inner">
-				<h1 class="page-title">project</h1>
+				<h1 class="page-title">UI Guide</h1>
 				<p class="slogan">
 					프로젝트의 특성과 니즈 분석을 통해<br>
 					최적화된 컨텐츠를 제공합니다.
@@ -97,62 +100,58 @@
 			<div class="head-line"></div>
 		</header>
 
-		<div class="content-wrap">
+		<div class="guide-content">
 			<!-- inner -->
-			<div class="inner">
-				<div>
-					<!-- Gnb -->
-					<aside>
-						<nav id="gnb">
-							<ul role="menu">
-								<li>
-									<strong>소개 <em class="int-a"></em></strong>
-									<ul class="cate a">
-										<li><a href="../Intro/summary.html">개요 및 목적</a></li>
-										<li><a href="../Intro/process.html">업무 프로세스</a></li>
-										<li><a href="../Intro/webpolicy.html">Web policy</a></li>
-									</ul>
-								</li>
-								<li>
-									<strong>UI/UX <em class="int-a"></em></strong>
-									<ul class="cate b">
-										<li><a href="../uiux/guide.html">CI 가이드</a></li>
-										<li><a href="../uiux/logo.html">시스템 로고</a></li>
-										<li><a href="../uiux/color.html">Color</a></li>
-										<li><a href="../uiux/typography.html">Typography</a></li>
-										<li><a href="../uiux/footer.html">Footer</a></li>
-										<li><a href="../uiux/ui.html">UI Guide</a></li>
-										<!--<li><a href="../uiux/pcLayout.html">Layout(pc)</a></li>
-										<li><a href="../uiux/pcDesign.html">Design(pc)</a></li>
-										<li><a href="../uiux/mobileLayout.html">Layout(mobile)</a></li>
-										<li><a href="../uiux/mobileDesign.html">Design(mobile)</a></li>-->
-									</ul>
-								</li>
-								<li>
-									<strong>Web Publishing <em class="int-a"></em></strong>
-									<ul class="cate c">
-										<!--<li><a href="../publishing/stabdard.html">Web Stabdard</a></li>-->
-										<li><a href="../publishing/html.html">HTML Guide</a></li>
-										<li><a href="../publishing/css.html">CSS Guide</a></li>
-										<li><a href="../publishing/crossBrowsing.html">Cross Browsing</a></li>
-										<li><a href="../publishing/effect/contents.html" target="_blank" title="새창열림">Motion Effect</a></li>
-									</ul>
-								</li>
-								<li>
-									<strong>웹 접근성 및<br>호환성 <em class="int-a"></em></strong>
-									<ul class="cate d">
-										<li><a href="../accessibility/compatibility.html">웹 호환성 (웹표준)</a></li>
-										<li><a href="../accessibility/info.html">웹 접근성의 이해</a></li>
-										<li><a href="../accessibility/guideline.html">웹 접근성 지침</a></li>
-										<li><a href="../accessibility/guide.html">실무적용 가이드</a></li>
-										<li><a href="../accessibility/tools.html">평가도구</a></li>
-									</ul>
-								</li>
-							</ul>			
-						</nav>
-						<a href="../download.html" class="bt bt02 large al"><span>7</span><i class="sprite down"></i>Element Download</a>
-					</aside>
-					<!-- /Gnb -->
+			<div class="guide-inner">
+				<!-- Gnb -->
+				<aside>
+					<nav id="gnb">
+						<ul role="menu">
+							<li>
+								<strong>소개 <em class="int-a"></em></strong>
+								<ul class="cate a">
+									<li><a href="guide_summary.html">개요 및 목적</a></li>
+									<li><a href="guide_process.html">업무 프로세스</a></li>
+									<li><a href="guide_webpolicy.html">Web policy</a></li>
+								</ul>
+							</li>
+							<li>
+								<strong>UI/UX <em class="int-a"></em></strong>
+								<ul class="cate b">
+									<li><a href="guide_ci.html">CI 가이드</a></li>
+									<li><a href="guide_logo.html">시스템 로고</a></li>
+									<li><a href="guide_color.html">Color</a></li>
+									<li><a href="guide_typography.html">Typography</a></li>
+									<li><a href="guide_footer.html">Footer</a></li>
+									<li><a href="guide_ui.html">UI Guide</a></li>
+								</ul>
+							</li>
+							<li>
+								<strong>Web Publishing <em class="int-a"></em></strong>
+								<ul class="cate c">
+									<!--<li><a href="../publishing/stabdard.html">Web Stabdard</a></li>-->
+									<li><a href="guide_html.html">HTML Guide</a></li>
+									<li><a href="guide_css.html">CSS Guide</a></li>
+									<li><a href="guide_crossBrowsing.html">Cross Browsing</a></li>
+									<li><a href="guide_motion.html" target="_blank" title="새창열림">Motion Effect</a></li>
+								</ul>
+							</li>
+							<li>
+								<strong>웹 접근성 및<br>호환성 <em class="int-a"></em></strong>
+								<ul class="cate d">
+									<li><a href="guide_compatibility.html">웹 호환성 (웹표준)</a></li>
+									<li><a href="guide_info.html">웹 접근성의 이해</a></li>
+									<li><a href="guide_guideline.html">웹 접근성 지침</a></li>
+									<li><a href="guide_Practice.html">실무적용 가이드</a></li>
+									<li><a href="guide_tools.html">평가도구</a></li>
+								</ul>
+							</li>
+						</ul>			
+					</nav>
+					
+				</aside>
+				<!-- /Gnb -->
+				<div class="inner">
 					<script type="text/javascript">
 					//Menu Select
 					$(document).ready(function() {  
@@ -200,6 +199,8 @@
 						</section>
 					</article>
 					<!-- /Contents -->
+
+
 				</div>
 			</div>
 			<!-- inner -->

@@ -124,7 +124,6 @@
 									<li><a href="guide_typography.html">Typography</a></li>
 									<li><a href="guide_footer.html">Footer</a></li>
 									<li><a href="guide_ui.html">UI Guide</a></li>
-
 								</ul>
 							</li>
 							<li>
@@ -157,109 +156,107 @@
 					<script type="text/javascript">
 					//Menu Select
 					$(document).ready(function() {  
-						$('.cate.b li').eq(0).find('a').addClass('active');
+						$('.cate.d li').eq(1).find('a').addClass('active');
 					});
 					</script>	
 
 					<!-- Location -->
-					<p class="location"><span>HOME&gt; </span><span>UI/UX &gt; </span><strong>CI 가이드</strong></p>
+					<p class="location"><span>HOME&gt; </span><span>웹 접근성 &gt; </span><strong>웹 접근성의 이해</strong></p>
 					<!-- /Location -->
 
 					<!-- Contents -->
 					<article id="container">
-						<h2 class="sub-title">CI 가이드</h2>
+						<h2 class="sub-title">웹 접근성의 이해</h2>
 						<section class="contents">
-							<h3 class="sub-title2">심볼&amp;컨셉</h3>
+							<!-- 웹 접근성이란?-->
+							<h3 class="sub-title2">웹 접근성이란?</h3>
+							<p class="sub-cont">
+								월드 와이드 웹 (World Wide Web)을 창시한 팀 버너스 리(Tim Berners-Lee)는 웹이란 ‘장애에 구애 없이 모든 사람들이 손쉽게 정보를 공유할 수 있는 공간’이라고 정의하였으며, 웹 콘텐츠를 제작할 때에는 장애에 구애됨이 없이 누구나 접근할 수 있도록 제작하여야 한다고 하였다. 이렇듯 웹 창시자가 웹의 기본적 철학에서 웹 접근성 부문을 강조함에도 불구하고, 웹 접근성을 바라보는 입장에 따라 다르게 정의하고 있다.<br>하지만, 접근에 대한 개념의 다양성으로 인한 인식의 부족보다는 접근성에 대한 개념을 잘못 이해하고 있는 것이 더욱 문제이다. 즉, 접근성을 단지 장애인에게 국한된 문제라고 잘못 이해하고 있는 경우가 대부분이라는 것이다. 비록 접근성 준수가 장애인에게 가장 혜택이 많이 돌아가는 것은 사실이지만, 접근성이란 장애인뿐만 아니라 모든 사람이 정보통신 기기나 서비스를 손쉽게 활용할 수 있도록 만드는 것을 말하는 것이다. 예를 들자면 장애인과 노인들을 위해 개발된 리모컨, 전화, 자동문 등의 제품들이 널리 보급되면서 궁극적으로는 모든 사람들이 편리하게 활용하게 된 것을 들 수 있다. 이러한 접근성 개념은 정보통신 분야에서 다양한 제품 및 서비스 간의 호환성 문제, 이동 정보통신 기기 등으로 그 필요성 및 중요성이 더욱 증대되고 있다.<br>월드 와이드 웹 컨소시엄(W3C: World Wide Web Consortium), 웹 접근성 이니셔티브(WAI: Web Accessibility Initiative)와 짐 대처 (Jim. Thatcher)는 웹 접근성에 대해 매우 현실적으로 정의 하고 있다. 즉, 장애를 가진 사람들이 웹 콘텐츠를 인지하고, 편리하게 사용할 수 있으며, 그 내용이 이해하기 쉬워야 하며, 견고성을 지녀야 웹 접근성이 있다고 보는 관점이다.<br> 인터넷 전자도서관인 Wikipedia 는 웹 접근성의 개념을 웹 콘텐츠 뿐만 아니라 인터넷을 통하여 전달될 수 있는 모든 콘텐츠로 확대하고 있다.<br>이처럼 웹 접근성의 정의는 기관 별로 약간씩 차이가 있으나 모든 사람이 다양한 조건의 환경에서 다양한 장치를 이용하여 웹 콘텐츠에 접근할 수 있도록 보장한다는 보편적 접근성<br>(Universal Accessibility)으로 정의할 수 있으며, 보편적 접근성을 보장하게 되면 장애를 지닌 사람부터 일시적으로 불리한 조건을 갖게 된 정상인에 이르기까지 편리하게 웹 콘텐츠에 접근할 수 있다.<br>또한, 네트워크 속도가 느리거나 모바일 기기를 사용하는 경우, 다양한 운영체제와 웹 브라우저를 사용하는 경우 등의 환경 조건에 관계없이 웹 콘텐츠에 접근할 수 있어 웹 사용성을 높일 수 있다.
+							</p>
+							<!-- /웹 접근성이란?-->
+							
+							<!-- 장애환경 이해 -->
+							<h3 class="sub-title2">장애환경 이해</h3>
 							<div class="sub-cont">
-								<p class="m-b10">올포랜드의 심볼마크와 로고는 도시와 자연공간을 대표하는 녹색과 파란색 바탕에 계획의 개념인 선을 가미하여 공간과 인간의 조화를 나타내는 이미지를 형성한다.<br>또한 회사의 전문 사업분야를 의미함으로써 상승적 이미지 창출은 물론 조직구성원에게 새로운 가치관과 행동양식을 갖추는 단계로까지 승화시켜 올포랜드의 기업이미지를<br>확고히 하는 데 핵심적 역할을 하고 있다.</p>
-								<img src="images/guide/img_ci1.jpg" alt="올포랜드 CI">
-								<div class="bt-area">
-									<a href="http://www.all4land.com/info/fileDown.php" class="bt bt03 m-t10">올포랜드 CI AI파일 다운로드</a>
-									<a href="http://www.all4land.com/info/fileDown03.php" class="bt bt03 m-t10">올포랜드 CI PNG파일 다운로드</a>
+								<div class="table-basic ac m-b10">
+									<table>
+										<caption>장애환경 이해 리스트</caption>
+										<colgroup>
+											<col style="width:20%">
+											<col style="width:10%">
+											<col style="width:40%">
+											<col style="width:auto">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" colspan="2">장애유형</th>
+												<th scope="col">특징</th>
+												<th scope="col">보완대책</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td rowspan="3">시각장애</td>
+												<td>전맹</td>
+												<td>모니터를 볼 수 없음, 마우스 사용 어려움</td>
+												<td>스크린리더</td>
+											</tr>
+											<tr>
+												<td>약시</td>
+												<td>모니터 사용이 일부 가능함</td>
+												<td>화면확대 / 고대비</td>
+											</tr>
+											<tr>
+												<td>색맹</td>
+												<td>색을 구별할 수 없음</td>
+												<td>색상에만 의존하지 않기 / 고대비</td>
+											</tr>
+											<tr>
+												<td colspan="2">청각장애</td>
+												<td>사운드, 오디오 등을 청취할 수 없음</td>
+												<td>수화, 시각정보 제공</td>
+											</tr>
+											<tr>
+												<td rowspan="2">지체장애</td>
+												<td>상지장애</td>
+												<td>손을 사용할 수 없음</td>
+												<td>마우스 대체 방법, 키보드만 사용</td>
+											</tr>
+											<tr>
+												<td>기타</td>
+												<td>움직임이 어려움</td>
+												<td>충분한 시간 제공</td>
+											</tr>
+											<tr>
+												<td colspan="2">언어장애</td>
+												<td>복잡한 용어, 어려운 용어의 이해 불가능</td>
+												<td>쉬운 용어 사용</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
-							</div>
-							
-							<h3 class="sub-title2">심사용원칙</h3>
-							<p class="sub-cont">Web 표준 컬러를 적용할 경우 명확하고 식별 가능하도록 하는 것이 매우 중요하며, 배경색과 명도대비가 클수록 선명하게 드러날 수 있다.</p>
-							
-							<!-- 전용색상 -->
-							<h3 class="sub-title2">전용색상</h3>
-							<div class="sub-cont">
-								<p class="m-b10">전용색상은 코퍼레이트 심볼을 중심으로 Application System 전반에 걸쳐 사용함으로써 컬러를 통한 올포랜드의 이미지를 전달한다.</p>
-								<ul class="color">
-									<!--li>
-										<span class="c-dgray"></span>
-										<div>
-											<strong>Matterhorn</strong>							
-											<span><em>HEX</em>#4c4c4c</span>
-											<span><em>RGB</em>76, 76, 78</span>
-										</div>
+								<p class="important m-b20">* 스크린리더(Screen reader) : 화면을 불 수 없는 시각 장애인들에게 모니터에 표시된 정보를 음성으로 읽어주는 프로그램</p>
+								
+								<ul class="gallery">
+									<li>
+										<img src="images/guide/img_info1.jpg" class="g-thumb" alt="스크린 리더 사용 이미지">
+										<p>시각장애인이 스크린리더를 이용해 정보검색대회에서 문제를 풀고 있는 모습</p>
 									</li>
 									<li>
-										<span class="c-blue"></span>
-										<div>
-											<strong>Cerulean</strong>							
-											<span><em>HEX</em>#007ab5</span>
-											<span><em>RGB</em>0, 122, 181</span>
-										</div>
+										<img src="images/guide/img_info2.jpg" class="g-thumb" alt="타이핑 보조기구 손가락 지지대 사용 이미지">
+										<p>타이핑 보조기구 손가락 지지대</p>
 									</li>
 									<li>
-										<span class="c-green"></span>
-										<div>
-											<strong>Limerick</strong>							
-											<span><em>HEX</em>#89b640</span>
-											<span><em>RGB</em>137, 182, 64</span>
-										</div>
-									</li-->
-									<li>
-										<span class="c-black"></span>
-										<div>
-											<strong>Black</strong>							
-											<span><em>HEX</em>#020202</span>
-											<span><em>RGB</em>2, 2, 2</span>
-										</div>
-									</li>
-									<li>
-										<span class="c-blue"></span>
-										<div>
-											<strong>Steel Blue</strong>							
-											<span><em>HEX</em>#007ab5</span>
-											<span><em>RGB</em>0, 122, 181</span>
-										</div>
-									</li>
-									<li>
-										<span class="c-yellow"></span>
-										<div>
-											<strong>Yellow Green</strong>							
-											<span><em>HEX</em>#c3d647</span>
-											<span><em>RGB</em>195, 214, 71</span>
-										</div>
-									</li>
-									<li>
-										<span class="c-red"></span>
-										<div>
-											<strong>Orange Red</strong>							
-											<span><em>HEX</em>#eb552d</span>
-											<span><em>RGB</em>235, 85, 45</span>
-										</div>
+										<img src="images/guide/img_info3.jpg" class="g-thumb" alt="조우스2 사용 이미지">
+										<p>입 또는 턱, 볼 등 머리의 움직임을 통해 커서를 이동하고 호흡을 통해 클릭 기능을 사용 할 수 있는 특수 마우스를 사용하고 있는 모습</p>
 									</li>
 								</ul>
 							</div>
-							<!-- /전용색상 -->
-							
-							<!-- 심볼활용 -->
-							<h3 class="sub-title2">심볼활용</h3>
-							<div class="sub-cont">
-								<p class="m-b10">심볼색상의 활용은 기업이미지 형성에서 중요한 이미지 요소이며 각 매체별로 코퍼레이트 심볼을 효과적으로 표현하기 위한 원칙이다.<br>코퍼레이트 심볼은 배경색과 관계가 있어 명확하게 보여져야 한다.</p>
-								<img src="images/guide/img_ci2.jpg" class="m-r10 half" alt="올포랜드 CI Full Color (White)">
-								<img src="images/guide/img_ci3.jpg" class="half" alt="올포랜드 CI Full Color (Black)">
-							</div>
-							<!-- /심볼활용 -->
-							
+							<!-- /장애환경 이해-->
 						</section>
 					</article>
 					<!-- /Contents -->
-					
+
 				</div>
 			</div>
 			<!-- inner -->
