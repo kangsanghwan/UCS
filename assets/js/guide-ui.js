@@ -12,21 +12,7 @@ $(document).ready(function(){
 		return ''; 
 	}
 	
-	//Skip Navigation
-	/*$('.nav-skip').find('a').each(function(index, val){		
-		$(this)
-		.bind('focus', function(){
-			$(this).css({'left':'0px'});
-		})
-		.bind('focusout', function(){
-			$(this).css({'left':'-300px'});
-		});
-	});	*/
-	
-	//Category 
-	/* var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
-	$.each(alphabet, function(letter) { $('.int-'+ alphabet[letter]).append($('.'+alphabet[letter]).find('li').length);});
-	$('.int-').append("(" + $('.cate li').length + ")"); */
+
 
 	//Contents Info Layer
 	$('ul.gallery li .g-thumb').hover(

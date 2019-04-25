@@ -17,6 +17,11 @@ html, body { height: 100%; width: 100%; }
 /* 
 * 구조 : Header 
 */
+#brand_header { z-index: 20; }
+#brand_header.full-page-2 { position: fixed; background-color: #000; height: 55px; }
+#brand_header.full-page-2 .hamburger, #brand_header.full-page-2 .ci { top: 10px; transition: all 0.5s ease-in; }
+#brand_header.full-page-2 .hamburger { top: 22px; }
+
 /* 
 * 구조 : Nav 
 */
@@ -49,17 +54,17 @@ html, body { height: 100%; width: 100%; }
 .content-head h1 { font-family: "Baskerville Old Face"; color: #202020; font-size: 48px; line-height: 1; }
 .content-head p { color: #626262; font-family: ''; font-size: 15px; padding: 15px 0 0; margin-bottom: 55px; }
 .content-head p a { padding-bottom: 5px; border-bottom: 1px solid #626262; }
-.content-head .fullname { position: absolute; right: 0; top: 0; animation-duration: 0.5s; animation-timing-function: ease-in; animation-name: width_full; }
+.content-head .fullname { position: absolute; right: 0; top: 0; }
 .content-head .fullname span { color: #bbbbbb; font-weight: bold; font-size: 18px; }
 .content-head .fullname span strong { color: #1c9dce; }
-.content-head .head-line { position: absolute; right: 0; top: 15px; height: 1px; width: 22%; background-color: #eee; animation-duration: 0.5s; animation-timing-function: ease-in; animation-name: width_full; }
-@keyframes width_full { from { width: 0; }
-  50% { width: 11%; }
-  to { width: 22%; } }
+.content-head .head-line { position: absolute; right: 0; top: 15px; height: 1px; width: 22%; background-color: #eee; }
+
 .content-wrap { margin: 0 auto; max-width: 1020px; }
 
-.nav-page { height: 55px; background-color: #000; }
+.nav-page { position: relative; z-index: 10; height: 55px; background: none; }
 .nav-page .ci { top: 10px; }
 .nav-page .hamburger { top: 22px; }
 
-/*# sourceMappingURL=common.css.map */
+.header-wrap { background-color: #000; position: fixed; top: 0; left: 0; width: 100%; height: 55px; z-index: 6; }
+
+#ucsContent { position: relative; z-index: 9; }

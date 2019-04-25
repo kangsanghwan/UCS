@@ -1,29 +1,29 @@
 @charset "UTF-8";
 @import "../import/import";
-
+body,
+html{
+	overflow:hidden;
+}
 body{
 	background-color:#06090b;
+
 }
 
 .main{
 	height:100vh;
 	width:100vw;
 	position:relative;
-
 	.section{
 		position:absolute;
 		top:0;
 		left:0;
 		width:100%;
 		height:100%;
-		visibility:hidden;
-		opacity:0;
 	}
 	#visual{
 		visibility:visible;
 		opacity:1;
 		z-index:2;
-
 		.ci-text{
 			position:absolute;
 			top:28.3vh;
@@ -238,7 +238,12 @@ body{
 		}
 	}
 	#whatwedo{
-		background-color:blue;
-		z-index:1;
+		padding-top:55px;
+		z-index:5;
+		top:100%;
+		.what-header{
+			background-color:#fff;
+			height:102px;
+		}
 	}
 }
