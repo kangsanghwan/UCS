@@ -18,5 +18,8 @@
 			}
 			e.preventDefault();
 		});
-	})
+	});
+
+	
+
 })(jQuery)

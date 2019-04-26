@@ -6,6 +6,14 @@
 /*
 ** PROGRASS
 */
+#progressBar { position: fixed; left: 0; top: 0; right: 0; bottom: 0; }
+#progressBar .display-table { display: table; width: 100%; height: 100%; text-align: center; }
+#progressBar .display-cell { display: table-cell; vertical-align: middle; }
+#progressBar .ci_cont { position: relative; display: inline-block; overflow: hidden; height: 40px; }
+#progressBar .ci_cont .all4land_ci { position: relative; z-index: 1; display: inline-block; }
+#progressBar .ci_cont .all4land_ci_on { display: inline-block; position: absolute; z-index: 2; left: 0; top: 0; height: 0; overflow: hidden; }
+#progressBar .ci_cont .all4land_ci_on span { display: block; height: 40px; }
+
 #docLoad { display: none; position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; z-index: 200; }
 #docLoad .background-effic { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
 #docLoad .bg-1 { z-index: 10; background-color: #fff; }
@@ -17,18 +25,18 @@ html, body { height: 100%; width: 100%; }
 /* 
 * 구조 : Header 
 */
-#brand_header { z-index: 20; }
+#brand_header { position: relative; z-index: 20; }
 #brand_header.full-page-2 { position: fixed; background-color: #000; height: 55px; }
-#brand_header.full-page-2 .hamburger, #brand_header.full-page-2 .ci { top: 10px; transition: all 0.5s ease-in; }
+#brand_header.full-page-2 .hamburger, #brand_header.full-page-2 .ci { top: 10px; }
 #brand_header.full-page-2 .hamburger { top: 22px; }
 
 /* 
 * 구조 : Nav 
 */
-.ci { position: fixed; left: 55px; top: 55px; z-index: 20; }
+.ci { position: fixed; left: 55px; top: 55px; z-index: 20; transition: all 0.5s ease-in; }
 .ci a { display: block; width: 35px; height: 35px; background: url(../../images/brand.png); }
 
-.hamburger { position: fixed; right: 55px; top: 55px; z-index: 20; }
+.hamburger { transition: all 0.5s ease-in; position: fixed; right: 55px; top: 55px; z-index: 20; }
 .hamburger #hamburger { display: block; position: relative; width: 16px; height: 10px; }
 .hamburger #hamburger span { display: block; width: 16px; height: 2px; background-color: #fff; transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
 .hamburger #hamburger span.line-1 { transform-origin: 0 0; margin-bottom: 6px; }
