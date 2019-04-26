@@ -201,7 +201,7 @@
 								<div class="Privacy-wrap">
 									<label class="custom-checkbox" for="44">
 										<input type="checkbox" id="44" name="">
-										<span><a href="">개인정보처리방침</a>에 동의합니다. <em class="">(필수)</em></span>
+										<span><a href="#" class="btn-agreement">개인정보처리방침</a>에 동의합니다. <em class="">(필수)</em></span>
 									</label>
 								</div>
 								<div class="btn-wrap">
@@ -335,8 +335,87 @@
 			})(jQuery);
 	    });
 </script>
-<style>
 
-</style>
+<div class="modal">
+	<div class="modal-container">
+		<header class="modal-header">
+			<div>
+				<h1 class="modal-ci"></h1>
+				<button role="button" class="btn__modal--close"><span class="blind">팝업닫기</span></button>
+			</div>
+		</header>
+		<!-- .modal-header -->
+
+		<div class="modal-body">
+			<div class="display-table">
+				<div class="display-cell">
+					<div class="agreement-content">
+						<div class="agreement-header">
+							<h2>개인정보 처리 방침 </h2>
+							<span>최종 수정 날짜: 2019년 04월 03일</span>
+						</div>
+						<div class="agreement-body">
+							<div class="agreement-sec">
+								<h3>1. 개인정보 수집의 이용 목적</h3>
+								<p>
+									(주)올포랜드(이하 회사)는 다음과 같은 목적을 위해 개인정보를 수집하고 이용합니다.<br>
+									- 서비스 제공, 콘텐츠 제공, 웹 컨설팅 기초 자료 확보, 마케팅 활용, 상삼 신청 처리등을 위한 원활한 의사소통 경로 확보.
+								</p>
+							</div>
+							<div class="agreement-sec">
+								<h3>2. 수집하는 개인정보의 항목 및 수집방법</h3>
+								<p>
+									회사는 다음과 같은 항목들을 수집하여 처리합니다.<br>
+									- 필수항목: 이름(업체명), 연락처, 이메일	
+								</p>
+							</div>
+							<div class="agreement-sec">
+								<h3>3. 개인정보의 보유 및 이용기간</h3>
+								<p>회사는 원칙적으로 이용자의  개인정보 수집 및 이용목적이 달성되면 치체없이 파기합니다.<br>
+								관계법령의 규정에 의하여 보존할 필요가 있는 경우에는 일정기간동안 보존합니다.<br>
+								- 문의하기 : 1년(정보통신망법)<br>
+								- 홈페이지 방문에 관한 기록 : 3개월(통신비밀보호법)
+								- 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년(전자 상거래 등에서의 소비자 보호에 관한 법률)
+								</p>
+							</div>
+							<div class="agreement-sec">
+								<h3>기타 개인정보 침해에 대한 신고나 상담이 필요하신 경우에는 아해 기관에 문의하시기 바랍니다.</h3>
+								<p>
+									회사는 원칙적으로 이용자의 개인정보 수집 및 이용목적이 달성되면 지체없이 파기합니다.<br>
+									- 개인정보침해신고센터 (<a href="http://www.1336.or.kr" target="_blank">www.1336.or,kr</a>/ 국번없이 118)<br>
+									- 정보보호마크인증위원회 (<a href="http://www.eprivacy.or.kr" target="_blank">www.eprivacy.or.kr</a>/ 02-580-0533~4 )<br>
+									- 대검찰청 인터넷범죄수사센터 (<a href=">http://www.icic.sppo.go.kr" target="_blank">http://icic.sppo.go.kr</a>/ 02-3480-3600)<br>
+									- 경찰청 사이버테러대응 센터 (<a href="http://www.ctrc.go.kr" target="_blank">www.ctrc.go.kr</a>/ 02-392-0330)
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- .modal-body -->
+	</div>
+</div>
+
+<script>
+	var $grid = $('.grid').imagesLoaded( function() {
+	  $grid.isotope({
+	  	percentPosition: true,
+	    layoutMode: 'masonry',
+	    itemSelector: '.grid-item'
+	  });
+	});
+
+	$('.btn-agreement , .project-img').on('click' , function(){
+		$('.modal').fadeIn(150);
+		return false;
+	})
+
+	$('.btn__modal--close').on('click' , function(){
+		$('.modal').fadeOut(150);
+		return false;
+	})
+</script>
+
 </body>
 </html>

@@ -634,3 +634,37 @@ textarea{
         }
     }
 }
+.agreement-content{
+    color:#fff;
+    .agreement-header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        align-content: stretch;
+        border-bottom: 1px solid #1c9dce;
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+        h2{
+            font-size: 30px;
+        }
+        span{
+            font-size: 15px;
+            color:#646464;
+        }
+
+    }
+    .agreement-body{
+        .agreement-sec{
+            margin-bottom: 40px;
+            h3{
+                margin-bottom: 20px;
+            }
+            p{
+                line-height: 1.8;
+                a{color:#fff;}
+            }
+        }
+    }
+}
