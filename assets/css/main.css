@@ -1,13 +1,12 @@
 body, html { overflow: hidden; }
 
-body { background-color: #06090b; }
-
 .main { height: 100vh; width: 100vw; position: relative; }
 .main .section { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 #visual { visibility: visible; opacity: 1; z-index: 2; }
 #visual .ci-text { position: absolute; top: 28.3vh; left: 25px; z-index: 10; }
 #visual .ci-text div + div { margin-top: 19px; }
+#visual .ci-text div:last-child { margin-top: 40px; }
 #visual .ci-text div span { display: block; position: relative; padding-left: 90px; height: 42px; overflow: hidden; }
 #visual .ci-text div span em { display: block; transform: translateY(0); }
 #visual .ci-text div [class^="text__block--"] { background-repeat: no-repeat; }
@@ -18,6 +17,9 @@ body { background-color: #06090b; }
 #visual .ci-text div .text__block--2 { background-image: url(../../images/line_ci_02.png); }
 #visual .ci-text div .text__block--3 { background-image: url(../../images/line_ci_03.png); }
 #visual .wrap { display: flex; flex-direction: row; width: 100%; height: 100%; }
+#visual .el-loader { opacity: 0; }
+#visual .first-front { position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; padding-top: 27vh; padding-right: 13.5vw; background: url(../../images/bg_first.jpg) no-repeat 0 0; background-size: cover; }
+#visual .first-front .img { text-align: right; }
 #visual .wait-area { width: 33%; height: 100%; }
 #visual .wait-container { position: relative; width: 100%; height: 100%; overflow: hidden; }
 #visual .wait-container .swiper { position: relative; width: 100%; overflow: hidden; }
@@ -45,7 +47,11 @@ body { background-color: #06090b; }
 #visual .control-menu button { background-color: #fff; vertical-align: top; display: block; float: right; opacity: 0.2; width: 25px; height: 1px; }
 #visual .view-fraction { position: absolute; right: 50px; bottom: 50px; color: #fff; }
 #visual .view-fraction strong { color: #1c9dce; }
+#visual .arrow_change { position: absolute; bottom: 40px; left: 0; width: 100%; text-align: center; }
+#visual .arrow_change a { display: inline-block; width: 24px; height: 12px; background: url(../../images/arrow_change.png) no-repeat 0 0; animation: fadeOut 1s 0.5s infinite linear alternate; }
 
+@keyframes fadeOut { 0% { opacity: 0; }
+  100% { opacity: 1; } }
 #whatwedo { padding-top: 55px; z-index: 5; top: 100%; height: 100vh; }
 #whatwedo .what-header { background-color: #fff; height: 102px; }
 #whatwedo .what-header .what-title { font-family: 'Baskerville Old Face'; font-size: 48px; line-height: 1.1; padding: 40px 0 0 8px; }
