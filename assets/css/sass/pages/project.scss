@@ -457,6 +457,10 @@ textarea{
 /*
 ** 프로젝트
 */
+
+#project{
+    margin:0 -15px;
+}
 .grid{
     position:relative;
     width:100%;
@@ -667,4 +671,32 @@ textarea{
             }
         }
     }
+}
+
+
+@include media('<desktop') {
+    .content-head{
+        padding:0 25px;
+    }
+    .content-wrap{
+        padding:0 25px;
+    }
+}
+
+@include media('>tablet' , '<desktop') {
+    .grid-item{
+        width:33.3333%;
+    }
+}
+
+@include media('<tablet') {
+    .grid-item{
+        width:50%;
+    }
+}
+
+@media (max-width: 450px) { 
+    .grid-item{
+        width:100%;
+    }   
 }

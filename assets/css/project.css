@@ -119,6 +119,8 @@ textarea { min-height: 200px; }
 /*
 ** 프로젝트
 */
+#project { margin: 0 -15px; }
+
 .grid { position: relative; width: 100%; }
 .grid:after { content: ''; display: block; clear: both; }
 
@@ -164,4 +166,8 @@ textarea { min-height: 200px; }
 .agreement-content .agreement-body .agreement-sec p { line-height: 1.8; }
 .agreement-content .agreement-body .agreement-sec p a { color: #fff; }
 
-/*# sourceMappingURL=project.css.map */
+@media (max-width: 1069px) { .content-head { padding: 0 25px; }
+  .content-wrap { padding: 0 25px; } }
+@media (min-width: 769px) and (max-width: 1069px) { .grid-item { width: 33.3333%; } }
+@media (max-width: 767px) { .grid-item { width: 50%; } }
+@media (max-width: 450px) { .grid-item { width: 100%; } }
